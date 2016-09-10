@@ -10,7 +10,7 @@ import { Component } from 'angular2/core';
     </div>
   `
 })
-// class declaration
+// class definition
 export class AppComponent {
 
 }
