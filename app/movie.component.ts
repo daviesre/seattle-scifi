@@ -8,7 +8,7 @@ import { Component } from 'angular2/core';
     <h3>{{movie.id}}: {{ movie.title }}</h3>
     <h2><img height="200" width="auto" src={{movie.image}}></h2>
     <h4>directed by: {{movie.director}}</h4>
-    <h4>{{movie.year}}, {{movie.description}}</h4>
+    <h4>{{movie.description}} ({{movie.year}})</h4>
   `
 })
 export class MovieComponent {

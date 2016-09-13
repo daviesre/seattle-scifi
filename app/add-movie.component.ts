@@ -12,7 +12,7 @@ import { Movie } from './movie.model';
     <input placeholder="Director" #newDirector>
     <input placeholder="Provide a Brief Description" #newDescription>
     <input placeholder="Provide an Image URL" #newImage>
-    <button (click)="addMovie(newId, newTitle, newDirector, newDescription, newImage)">Add Film</button>
+    <button (click)="addMovie(newId, newYear, newTitle, newDirector, newDescription, newImage)">Add Film</button>
   `
 })
 export class AddMovieComponent {
