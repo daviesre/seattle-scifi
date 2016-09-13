@@ -17,7 +17,13 @@ import { Quote } from './quote.model';
 })
 export class QuoteListComponent {
     public quotes: Quote[];
+    public onQuoteSelect: EventEmitter<Quote>;
+    public selectedQuote: Quote;
     constructor() {
-
+        this.onQuoteSelect = new EventEmitter();
+    }
+    quoteClicked(clickedQuote: Quote): void {
+        this.selectedQuote = clickedQuote;
+        this.onQuoteSelect.emit(clickedQuote);
     }
 }
