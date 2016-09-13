@@ -7,11 +7,12 @@ import { Actor } from './actor.model';
   template:
   `
   <h3>Add Actor</h3>
+  <input placeholder="ID" #newId>
   <input placeholder="First Name" #newFirstName>
   <input placeholder="Last Name" #newLastName>
   <input placeholder="Role" #newRole>
-  <input placeholder="ID" #newID>
-  <button (click)="addActor(newFirstName, newLastName, newRole, newID)">Add Actor</button>
+  <input placeholder="Role" #newMovie>
+  <button (click)="addActor(newId, newFirstName, newLastName, newRole, newMovie)">Add Actor</button>
   `
 })
 export class AddActorComponent {
@@ -19,9 +20,13 @@ export class AddActorComponent {
   constructor() {
     this.onSubmitAddActor = new EventEmitter();
   }
-  addActor(firstName: HTMLInputElement, lastName: HTMLInputElement, role: HTMLInputElement, id: HTMLInputElement) {
+  addActor(id: HTMLInputElement, firstName: HTMLInputElement, lastName: HTMLInputElement, role: HTMLInputElement, movie: HTMLInputElement) {
     this.onSubmitAddActor.emit({
-      firstName: firstName.value, lastName: lastName.value, role: role.value, id: id.value
+      id: id.value,
+      firstName: firstName.value,
+      lastName: lastName.value,
+      role: role.value,
+      movie: movie.value
     });
   }
 }
