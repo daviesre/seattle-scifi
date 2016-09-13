@@ -1,4 +1,4 @@
-import { Component } from 'angular2/core';
+import { Component, EventEmitter } from 'angular2/core';
 import { MovieComponent } from './movie.component';
 import { Movie } from './movie.model';
 
@@ -15,9 +15,15 @@ import { Movie } from './movie.model';
     </movie-display>
   `
 })
-export class MovieLIstComponent {
-  public moives: Movie[];
+export class MovieListComponent {
+  public movies: Movie[];
+  public onMovieSelect: EventEmitter<Movie>;
+  public selectedMovie: Movie;
   constructor() {
-    
+    this.onMovieSelect = new EventEmitter();
+  }
+  movieClicked(clickedMovie: Movie): void {
+    this.selectedMovie = clickedMovie;
+    this.onMovieSelect.emit(clickedMovie);
   }
 }
