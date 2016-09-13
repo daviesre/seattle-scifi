@@ -1,17 +1,21 @@
 import { Movie } from './movie.model';
 import { Component } from 'angular2/core';
 import { MovieComponent } from './movie.component';
+import { AddMovieComponent } from './add-movie.component';
 import { ActorListComponent } from './actor-list.component';
 import { QuoteListComponent } from './quote-list.component';
 
 @Component({
   selector: 'movie-list',
   inputs: ['movieList'],
-  directives: [MovieComponent, ActorListComponent, QuoteListComponent],
+  directives: [MovieComponent, AddMovieComponent, ActorListComponent, QuoteListComponent],
   template: `
     <movie-display *ngFor="#currentMovie of movieList"
       [movie]="currentMovie"></movie-display>
+      <add-movie></add-movie>
+      <hr>
       <actor-list></actor-list>
+      <hr>
       <quote-list></quote-list>
   `
 })
