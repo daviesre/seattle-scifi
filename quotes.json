@@ -1,22 +1,22 @@
 { "quote": [{
     "id": 0,
     "body": "We need you, Sebastian. You're our best and only friend.",
-    "actor": "Pris",
+    "role": "Pris",
     "movie": "Bladerunner (Director's Cut)"
 }, {
     "id": 1,
     "body": "Isn't it strange, to create something that hates you?",
-    "actor": "Ava",
+    "role": "Ava",
     "movie": "Ex Machina"
 }, {
     "id": 2,
     "body": "Stilgar, do we have wormsign?",
-    "actor": "Paul",
+    "role": "Paul",
     "movie": "Dune"
 }, {
     "id": 3,
     "body": "My name isn't pretty-pretty, it's Barbarella",
-    "actor": "Barbarella",
+    "role": "Barbarella",
     "movie": "Barbarella"
     }]
 }
