@@ -15,7 +15,7 @@ import { Movie } from './movie.model';
     </movie-display>
   `
 })
-export class MovieLIstComponent {
+export class MovieListComponent {
   public movies: Movie[];
   public onMovieSelect: EventEmitter<Movie>;
   public selectedMovie: Movie;
