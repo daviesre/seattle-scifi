@@ -1,6 +1,7 @@
 import { Movie } from './movie.model';
 import { Component } from 'angular2/core';
 import { MovieComponent } from './movie.component';
+import { AddMovieComponent } from './add-movie.component';
 import { ActorListComponent } from './actor-list.component';
 import { QuoteListComponent } from './quote-list.component';
 import { EraPipe } from './era.pipe';
@@ -9,7 +10,7 @@ import { EraPipe } from './era.pipe';
   selector: 'movie-list',
   inputs: ['movieList'],
   pipes: [EraPipe],
-  directives: [MovieComponent, ActorListComponent, QuoteListComponent],
+  directives: [MovieComponent, AddMovieComponent, ActorListComponent, QuoteListComponent],
   template: `
   <div class="era-filter">
     <select (change)="onChange($event.target.value)">
@@ -20,7 +21,10 @@ import { EraPipe } from './era.pipe';
   </div>
     <movie-display *ngFor="#currentMovie of movieList | movieEra:selectedMovie"
       [movie]="currentMovie"></movie-display>
+      <add-movie></add-movie>
+      <hr>
       <actor-list></actor-list>
+      <hr>
       <quote-list></quote-list>
   `
 })
