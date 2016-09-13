@@ -1,4 +1,4 @@
-import { Component } from 'angular2/core';
+import { Component, EventEmitter } from 'angular2/core';
 import { QuoteComponent } from './quote.component';
 import { Quote } from './quote.model';
 
@@ -8,8 +8,8 @@ import { Quote } from './quote.model';
     outputs: ['onQuoteSelect'],
     directives: [QuoteComponent],
     template: `
-        <quote-display *ngFor="currentQuote of quoteList"
-            (click)="quoteClicked(currentQuote):
+        <quote-display *ngFor="#currentQuote of quoteList"
+            (click)="quoteClicked(currentQuote)"
             [class.selected]="currentQuote === selectedQuote"
             [quote]="currentQuote">
         </quote-display>
