@@ -5,7 +5,9 @@ import { Movie } from './movie.model';
   selector: 'movie-display',
   inputs: ['movie'],
   template: `
-      <h3>Title: </h3>
+    <ul>
+      <li>Title: {{movie.title}}</li>
+    </ul>
   `
 })
 export class MovieComponent {
