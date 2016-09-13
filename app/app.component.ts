@@ -1,6 +1,7 @@
 // import Component code from angulary library
 import { Component } from 'angular2/core';
 import { Actor } from "./actor.model";
+import { Movie } from "./movie.model";
 
 // annotation
 @Component({
