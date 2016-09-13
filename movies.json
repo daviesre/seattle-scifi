@@ -1,23 +1,23 @@
 { "movies": [{
-    "id": "1",
+    "id": 0,
     "title": "Barbarella",
     "director": "Roger Vadim",
     "description": "In the distant future, a highly sexual woman is assigned with finding and stopping the evil Durand-Durand. Along the way, she encounters various unusual people.",
     "image": "http://ia.media-imdb.com/images/M/MV5BMjExMzcwMjU4OV5BMl5BanBnXkFtZTgwNzYzMjU2MTE@._V1_SY1000_CR0,0,683,1000_AL_.jpg"
   }, {
-    "id": "2",
+    "id": 1,
     "title": "Blade Runner",
     "director": "Ridley Scott",
     "description": "A blade runner must pursue and try to terminate four replicants who stole a ship in space and have returned to Earth to find their creator.",
     "image": "http://ia.media-imdb.com/images/M/MV5BZWZlYmEyYTItNGRjYy00ZmMxLWEzMWItM2Q2NjZlNTMwMjQ3XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SY1000_CR0,0,665,1000_AL_.jpg"
   }, {
-    "id": "3",
+    "id": 2,
     "title": "Dune",
     "director": "David Lynch",
     "description": "A Duke's son leads desert warriors against the galactic emperor and his father's evil nemesis when they assassinate his father and free their desert world from the emperor's rule.",
     "image": "http://ia.media-imdb.com/images/M/MV5BNTkxMjkxNzg3Nl5BMl5BanBnXkFtZTgwNjUyMDI3NjE@._V1_.jpg"
   }, {
-    "id": "4",
+    "id": 3,
     "title": "Ex Machina",
     "director": "Alex Garland",
     "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a breath-taking humanoid A.I.",
