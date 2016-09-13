@@ -1,6 +1,8 @@
+import { Component } from 'angular2/core';
+import { QuoteComponent } from './quote.component';
+import { Quote } from './quote.model';
 
-
-@Componnt({
+@Component({
     selector: 'quote-list',
     inputs: ['quoteList'],
     outputs: ['onQuoteSelect'],
@@ -13,3 +15,9 @@
         </quote-display>
     `
 })
+export class QuoteListComponent {
+    public quotes: Quote[];
+    constructor() {
+
+    }
+}
