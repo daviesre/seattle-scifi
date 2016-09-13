@@ -5,7 +5,7 @@ import { Component } from 'angular2/core';
   selector: 'movie-display',
   inputs: ['movie'],
   template: `
-    <h3>Movie Title</h3>
+    <h3>{{ movie.title }}</h3>
   `
 })
 export class MovieComponent {
