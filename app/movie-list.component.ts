@@ -3,13 +3,21 @@ import { Component } from 'angular2/core';
 import { MovieComponent } from './movie.component';
 import { ActorListComponent } from './actor-list.component';
 import { QuoteListComponent } from './quote-list.component';
+import { EraPipe } from './era.pipe';
 
 @Component({
   selector: 'movie-list',
   inputs: ['movieList'],
+  pipes: ['EraPipe'],
   directives: [MovieComponent, ActorListComponent, QuoteListComponent],
   template: `
-    <movie-display *ngFor="#currentMovie of movieList"
+    <div class="era-filter">
+      <select (change)="onChange($event.target.value)">
+      <option value="all">Show All Movies</option>
+      <option value="isGoldenAge">Golden Age (30s-40s)</option>
+      <option value="isNewWave">New Wave (60s-70s)</option>
+    </div>
+    <movie-display *ngFor="#currentMovie of movieList | movieEra:selectedMovie"
       [movie]="currentMovie"></movie-display>
       <actor-list></actor-list>
       <quote-list></quote-list>
@@ -17,6 +25,7 @@ import { QuoteListComponent } from './quote-list.component';
 })
 export class MovieListComponent {
   public movieList: Movie[];
+  public selectedMovie: string = "all";
 
   constructor() {
     this.movieList = [
@@ -28,5 +37,8 @@ export class MovieListComponent {
 
       new Movie(3, 2015, "Ex Machina", "Alex Garland", "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a breath-taking humanoid A.I.", "http://ia.media-imdb.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SY1000_CR0,0,674,1000_AL_.jpg")
     ];
+  }
+  onChange(optionFromMenu) {
+    this.selectedMovie = optionFromMenu;
   }
 }
