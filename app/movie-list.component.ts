@@ -21,7 +21,7 @@ import { EraPipe } from './era.pipe';
   </div>
     <movie-display *ngFor="#currentMovie of movieList | movieEra:selectedMovie"
       [movie]="currentMovie"></movie-display>
-      <add-movie></add-movie>
+      <add-movie (onSubmitAddMovie)="createMovie($event)"></add-movie>
       <hr>
       <actor-list></actor-list>
       <hr>
@@ -45,5 +45,16 @@ export class MovieListComponent {
 
       new Movie(3, 2015, "Ex Machina", "Alex Garland", "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a breath-taking humanoid A.I.", "http://ia.media-imdb.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SY1000_CR0,0,674,1000_AL_.jpg")
     ];
+  }
+  createMovie(movie) : void {
+    this.movieList.push(
+      new Movie(
+        movie.id,
+        movie.year,
+        movie.title,
+        movie.director,
+        movie.description,
+        movie.image)
+    );
   }
 }
