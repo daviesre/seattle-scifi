@@ -9,15 +9,11 @@ import { ActorListComponent } from './actor-list.component';
   outputs: ['onMovieSelect'],
   directives: [MovieComponent, ActorListComponent],
   template: `
-    <movie-display *ngFor="currentMovie of movieList"
-      (click)="movieClicked(currentMovie)"
-      [class.selected]="currentMovie === selectedMovie"
-      [movie]="currentMovie">
-    </movie-display>
+    <movie-display>Test</movie-display>
     <actor-list></actor-list>
   `
 })
-export class MovieLIstComponent {
+export class MovieListComponent {
   public moives: Movie[];
   constructor() {
 
