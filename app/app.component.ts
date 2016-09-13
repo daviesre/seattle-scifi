@@ -10,9 +10,14 @@ import { MovieListComponent } from "./movie-list.component";
 // annotation
 @Component({
   selector: 'my-app',
+  directives: [MovieListComponent],
   template: `
     <div class = "container">
       <h1>Seattle Sci-Fi!</h1>
+    </div>
+
+    <div class="container">
+      <movie-list></movie-list>
     </div>
   `
 })
