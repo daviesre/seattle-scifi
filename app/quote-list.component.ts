@@ -8,8 +8,8 @@ import { Quote } from './quote.model';
     outputs: ['onQuoteSelect'],
     directives: [QuoteComponent],
     template: `
-        <quote-display *ngFor="currentQuote of quoteList"
-            (click)="quoteClicked(currentQuote):
+        <quote-display *ngFor="#currentQuote of quoteList"
+            (click)="quoteClicked(currentQuote)"
             [class.selected]="currentQuote === selectedQuote"
             [quote]="currentQuote">
         </quote-display>
