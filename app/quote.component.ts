@@ -6,7 +6,7 @@ import { Quote } from './quote.model';
   selector: 'quote-display',
   inputs: ['quote'],
   template: `
-    <h3>{{quote.body}}</h3>
+    <h3>Quote is: {{quote.body}}</h3>
   `
 })
 export class QuoteComponent {
