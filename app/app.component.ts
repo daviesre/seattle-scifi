@@ -5,6 +5,7 @@ import { Movie } from "./movie.model";
 import { Quote }  from "./quote.model";
 import { QuoteListComponent } from "./quote-list.component";
 import { ActorListComponent } from "./actor-list.component";
+import { MovieListComponent } from "./movie-list.component";
 
 // annotation
 @Component({
