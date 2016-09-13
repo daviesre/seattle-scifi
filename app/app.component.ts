@@ -2,6 +2,9 @@
 import { Component } from 'angular2/core';
 import { Actor } from "./actor.model";
 import { Movie } from "./movie.model";
+import { Quote }  from "./quote.model";
+import { QuoteListComponent } from "./quote-list.component";
+import { ActorListComponent } from "./actor-list.component";
 
 // annotation
 @Component({
