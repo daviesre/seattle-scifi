@@ -2,6 +2,8 @@ import { Component } from 'angular2/core'
 import { Actor } from './actor.model';
 import { ActorComponent } from './actor.component';
 import { AddActorComponent } from './add-actor.component';
+import { ActorService } from './actor.service';
+import { OnInit } from 'angular2/core';
 //import update later
 
 @Component({
@@ -15,19 +17,20 @@ import { AddActorComponent } from './add-actor.component';
     [actor]="currentActor">
   </actor-display>
   <add-actor (onSubmitAddActor)="createActor($event)"></add-actor>
-  `
+  `,
+  providers: [ActorService]
 })
 export class ActorListComponent {
   public actorList: Actor[];
 
-  constructor() {
-    this.actorList = [
-      new Actor(100, "FN100", "LN100", "Role100", "Movie100"),
-      new Actor(101, "FN101", "LN101", "Role101", "Movie101"),
-      new Actor(102, "FN102", "LN102", "Role102", "Movie102"),
-      new Actor(103, "FN103", "LN103", "Role103", "Movie103"),
-    ];
+  constructor(private actorService: ActorService) {
+
   }
+
+  ngOnInit() {
+    this.actorList = this.actorService.getActors();
+  }
+
   //update method needed later
   createActor(actor) : void {
     this.actorList.push(
