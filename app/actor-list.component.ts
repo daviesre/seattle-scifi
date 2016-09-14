@@ -46,7 +46,8 @@ export class ActorListComponent {
         actor.firstName,
         actor.lastName,
         actor.role,
-        actor.movie)
+        actor.movie,
+        actor.imageUrl)
     );
   }
 }

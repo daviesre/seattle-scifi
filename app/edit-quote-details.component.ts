@@ -11,4 +11,5 @@ import { Quote } from './quote.model';
 })
 export class EditQuoteDetailsComponent{
   public quote: Quote;
+
 }

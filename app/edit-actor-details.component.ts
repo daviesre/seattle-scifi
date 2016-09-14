@@ -6,7 +6,7 @@ import { Actor } from './actor.model';
   inputs: ['actor'],
   template:
   `
-  <h4>{{actor.firstName}}</h4>
+  <h3>Edit Actor</h3>
   <input [(ngModel)]="actor.id"/>
   <input [(ngModel)]="actor.firstName"/>
   <input [(ngModel)]="actor.lastName"/>
