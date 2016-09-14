@@ -4,7 +4,8 @@ export class Actor {
     public firstName: string,
     public lastName: string,
     public roleName: string,
-    public movie: string) {
+    public movie: string,
+    public imageUrl: string) {
 
   }
 }
