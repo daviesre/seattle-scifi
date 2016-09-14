@@ -1,4 +1,4 @@
-Stolen Code including import codes:
+Stolen Code:
 
 
 EditMovieDetailsComponent
@@ -21,6 +21,10 @@ createMovie(movie) : void {
   );
 }
 
+AddActorComponent
+import { AddActorComponent } from './add-actor.component';
+`<add-actor (onSubmitAddActor)="createActor($event)"></add-actor>`
+  providers: [ActorService]
 
 
 

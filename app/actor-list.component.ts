@@ -1,7 +1,6 @@
 import { Component } from 'angular2/core'
 import { Actor } from './actor.model';
 import { ActorComponent } from './actor.component';
-import { AddActorComponent } from './add-actor.component';
 import { ActorService } from './actor.service';
 import { OnInit } from 'angular2/core';
 import { EditActorDetailsComponent } from './edit-actor-details.component';
@@ -10,7 +9,7 @@ import { EditActorDetailsComponent } from './edit-actor-details.component';
 @Component({
   selector: 'actor-list',
   inputs: ['actorList'],
-  directives: [ActorComponent, AddActorComponent, EditActorDetailsComponent], //update directive needed later
+  directives: [ActorComponent, EditActorDetailsComponent], //update directive needed later
   template:
   `
   <actor-display *ngFor="#currentActor of actorList"
@@ -18,7 +17,6 @@ import { EditActorDetailsComponent } from './edit-actor-details.component';
     [actor]="currentActor">
   </actor-display>
   <edit-actor-details *ngIf="selectedActor" [actor]="selectedActor"></edit-actor-details>
-  <add-actor (onSubmitAddActor)="createActor($event)"></add-actor>
   `,
   providers: [ActorService]
 })
@@ -36,18 +34,5 @@ export class ActorListComponent {
 
   actorClicked(clickedActor: Actor): void {
     this.selectedActor = clickedActor;
-  }
-
-  //update method needed later
-  createActor(actor) : void {
-    this.actorList.push(
-      new Actor(
-        actor.id,
-        actor.firstName,
-        actor.lastName,
-        actor.role,
-        actor.movie,
-        actor.imageUrl)
-    );
   }
 }
