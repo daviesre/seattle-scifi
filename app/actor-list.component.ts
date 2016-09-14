@@ -2,10 +2,11 @@ import { Component } from 'angular2/core'
 import { Actor } from './actor.model';
 import { ActorComponent } from './actor.component';
 import { AddActorComponent } from './add-actor.component';
-import { ActorService } from './actor.service';
-import { OnInit } from 'angular2/core';
+
+//for update
 import { EditActorDetailsComponent } from './edit-actor-details.component';
-//import update later
+import { OnInit } from 'angular2/core';
+declare var $:any
 
 @Component({
   selector: 'actor-list',
@@ -20,19 +21,10 @@ import { EditActorDetailsComponent } from './edit-actor-details.component';
   <edit-actor-details *ngIf="selectedActor" [actor]="selectedActor"></edit-actor-details>
   <add-actor (onSubmitAddActor)="createActor($event)"></add-actor>
   `,
-  providers: [ActorService]
 })
 export class ActorListComponent {
   public actorList: Actor[];
   public selectedActor: Actor;
-
-  constructor(private actorService: ActorService) {
-
-  }
-
-  ngOnInit() {
-    this.actorList = this.actorService.getActors();
-  }
 
   actorClicked(clickedActor: Actor): void {
     this.selectedActor = clickedActor;
