@@ -7,7 +7,7 @@ import { Actor } from './actor.model';
   //directives: [QuoteListComponent],
   template:
   `
-  <img src={{actor.imageUrl}} alt={{actor.roleName}}>
+  <img class="actor-image" src={{actor.imageUrl}} alt={{actor.roleName}}>
   <h4>{{actor.firstName}} {{actor.lastName}}</h4>
   `
 })
