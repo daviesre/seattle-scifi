@@ -9,7 +9,7 @@ import { MovieListComponent } from "./movie-list.component";
   directives: [MovieListComponent],
   template: `
     <div class = "container">
-      <h1>Seattle Sci-Fi!</h1>
+      <img class="logo-image" src="./resources/images/logo.png" alt="a logo of a spaceship">
     </div>
 
     <div class="container">
