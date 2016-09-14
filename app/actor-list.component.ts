@@ -32,5 +32,6 @@ export class ActorListComponent {
 
   actorClicked(clickedActor: Actor): void {
     this.selectedActor = clickedActor;
+    console.log(clickedActor)
   }
 }
