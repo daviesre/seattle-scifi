@@ -3,6 +3,22 @@
   margin-bottom:20px;
 }
 
+.jumbotron {
+  color: #ACBCBD;
+  background-color: #2B2129;
+  margin-left: -100px;
+  margin-right: -100px;
+}
+
+.game-title {
+  float: right;
+  padding-top: 80px;
+}
+
+body {
+  background-color: #ACBCBD;
+}
+
 /*.movie-id {
   float:left;
   width:30%;
