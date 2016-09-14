@@ -7,7 +7,8 @@ import { Actor } from './actor.model';
   //directives: [QuoteListComponent],
   template:
   `
-  <h4>ID: {{ actor.id }}, {{ actor.roleName }} in {{actor.movie}}, played by: {{ actor.firstName }} {{ actor.lastName }}</h4>
+  <img src={{actor.imageUrl}} alt={{actor.roleName}}>
+  <h4>{{actor.firstName}} {{actor.lastName}}</h4>
   `
 })
 export class ActorComponent {
