@@ -28,15 +28,19 @@ declare var $:any
         </div>
       </div>
     </div>
-  `
+  `,
+  providers: [ContentService]
 })
 export class CollectedListComponent{
   public content: Object[];
   constructor(private contentService: ContentService) {
 
   }
-  ngOnInit() {
+  ngOnInit() { this.getContent(); }
+
+  getContent() {
     this.content = this.contentService.getContent();
+    console.log("HALP!");
   }
 
 }
