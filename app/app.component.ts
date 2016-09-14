@@ -11,7 +11,7 @@ import { CollectedListComponent } from "./collected-list.component";
     <div class="container">
       <div class="jumbotron">
         <img class="logo-image" src="./resources/images/logo.png" alt="a logo of a spaceship">
-        <h1 class="game-title">Sci-Fi Quote Match-em-up!</h1>
+        <h1 class="game-title">Sci-Fi<br>Quote<br>Match-em-up!</h1>
       </div>
     </div>
 
