@@ -16,19 +16,10 @@ import { OnInit } from 'angular2/core';
     [actor]="currentActor">
   </actor-display>
   `,
-  providers: [ActorService]
 })
 export class ActorListComponent {
   public actorList: Actor[];
   public selectedActor: Actor;
-
-  constructor(private actorService: ActorService) {
-
-  }
-
-  ngOnInit() {
-    this.actorList = this.actorService.getActors();
-  }
 
   actorClicked(clickedActor: Actor): void {
     this.selectedActor = clickedActor;
