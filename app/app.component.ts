@@ -8,8 +8,11 @@ import { CollectedListComponent } from "./collected-list.component";
   selector: 'my-app',
   directives: [CollectedListComponent],
   template: `
-    <div class = "container">
-      <img class="logo-image" src="./resources/images/logo.png" alt="a logo of a spaceship">
+    <div class="container">
+      <div class="jumbotron">
+        <img class="logo-image" src="./resources/images/logo.png" alt="a logo of a spaceship">
+        <h1 class="game-title">Sci-Fi Quote Match-em-up!</h1>
+      </div>
     </div>
 
     <div class="container">
