@@ -25,6 +25,24 @@ AddActorComponent
 import { AddActorComponent } from './add-actor.component';
 `<add-actor (onSubmitAddActor)="createActor($event)"></add-actor>`
   providers: [ActorService]
+  createActor(actor) : void {
+    this.actorList.push(
+      new Actor(
+        actor.id,
+        actor.firstName,
+        actor.lastName,
+        actor.role,
+        actor.movie,
+        actor.imageUrl)
+    );
+  }
+
+
+EditActorDetailsComponent
+import { EditActorDetailsComponent } from './edit-actor-details.component';
+`  <edit-actor-details *ngIf="selectedActor" [actor]="selectedActor"></edit-actor-details>`
+
+
 
 
 
