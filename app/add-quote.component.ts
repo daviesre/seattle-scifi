@@ -11,7 +11,7 @@ import { Quote } from './quote.model';
       <input placeholder="Role" class="col-sm-2 input-lg" #newRole>
       <input placeholder="Movie" class="col-sm-2 input-lg" #newMovie>
       <input placeholder="Image" class="col-sm-2 input-lg" #newImage>
-      <button (click)="addQuote(newBody, newRole, newMovie)">Add</button>
+      <button (click)="addQuote(newBody, newRole, newMovie, newImage)">Add</button>
     </div>
   `
 })
@@ -22,9 +22,12 @@ export class AddQuoteComponent{
   }
 
   addQuote(newBody: HTMLInputElement, newRole: HTMLInputElement, newMovie: HTMLInputElement, newImage: HTMLInputElement) {
-    var newQuote = new Quote(0, newBody.value, newRole.value, newMovie.value, newImage.value);
+    var newQuote = new Quote(5, newBody.value, newRole.value, newMovie.value, newImage.value);
     console.log(newQuote);
     this.onSubmitNewQuote.emit(newQuote);
     newBody.value="";
+    newRole.value="";
+    newMovie.value="";
+    newImage.value="";
   }
 }

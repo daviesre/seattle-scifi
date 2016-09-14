@@ -17,7 +17,7 @@ import { AddQuoteComponent } from './add-quote.component';
         </quote-display>
         <edit-quote-details *ngIf="selectedQuote" [quote]="selectedQuote">
         </edit-quote-details>
-        <add-quote></add-quote>
+        <add-quote (onSubmitNewQuote)="createQuote($event)"></add-quote>
     `
 })
 
@@ -40,5 +40,8 @@ export class QuoteListComponent {
         console.log(clickedQuote);
         this.selectedQuote = clickedQuote;
         this.onQuoteSelect.emit(clickedQuote);
+    }
+    createQuote(quote: Quote): void {
+        this.quoteList.push(quote);
     }
 }
