@@ -26,9 +26,9 @@ import { EraPipe } from './era.pipe';
       (click)="movieClicked(currentMovie)"
       [class.selected]="currentMovie === selectedMeal"
       [movie]="currentMovie"></movie-display>
-      <edit-movie-details *ngIf="selectedMovie" [movie]="selectedMovie"></edit-movie-details>
-      <add-movie (onSubmitAddMovie)="createMovie($event)"></add-movie>
-      <hr>
+    <edit-movie-details *ngIf="selectedMovie" [movie]="selectedMovie"></edit-movie-details>
+    <add-movie (onSubmitAddMovie)="createMovie($event)"></add-movie>
+    <hr>
 
 
   `
