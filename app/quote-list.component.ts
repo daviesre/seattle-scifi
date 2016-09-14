@@ -2,13 +2,12 @@ import { Component, EventEmitter } from 'angular2/core';
 import { QuoteComponent } from './quote.component';
 import { Quote } from './quote.model';
 import { EditQuoteDetailsComponent } from './edit-quote-details.component';
-import { AddQuoteComponent } from './add-quote.component';
 
 @Component({
     selector: 'quote-list',
     inputs: ['quoteList'],
     outputs: ['onQuoteSelect'],
-    directives: [QuoteComponent, EditQuoteDetailsComponent, AddQuoteComponent],
+    directives: [QuoteComponent, EditQuoteDetailsComponent, ],
     template: `
         <h3>Quotes</h3>
         <quote-display *ngFor="#currentQuote of quoteList"
@@ -17,7 +16,7 @@ import { AddQuoteComponent } from './add-quote.component';
         </quote-display>
         <edit-quote-details *ngIf="selectedQuote" [quote]="selectedQuote">
         </edit-quote-details>
-        <add-quote (onSubmitNewQuote)="createQuote($event)"></add-quote>
+
     `
 })
 
@@ -40,8 +39,5 @@ export class QuoteListComponent {
         console.log(clickedQuote);
         this.selectedQuote = clickedQuote;
         this.onQuoteSelect.emit(clickedQuote);
-    }
-    createQuote(quote: Quote): void {
-        this.quoteList.push(quote);
-    }
+    }  
 }
