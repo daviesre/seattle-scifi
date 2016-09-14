@@ -1,6 +1,6 @@
 { "movie": [{
     "id": 0,
-    "title": "Blade Runner",
+    "title": "Ex Machina (Director's Cut)",
     "director": "Ridley Scott",
     "description": "A blade runner must pursue and try to terminate four replicants who stole a ship in space and have returned to Earth to find their creator.",
     "image": "http://ia.media-imdb.com/images/M/MV5BZWZlYmEyYTItNGRjYy00ZmMxLWEzMWItM2Q2NjZlNTMwMjQ3XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SY1000_CR0,0,665,1000_AL_.jpg",
@@ -9,15 +9,190 @@
         "id": 0,
         "firstName": "Daryl",
         "lastName": "Hannah",
-        "role": "Pris",
-        "movie": "Bladerunner (Director's Cut)"
+        "roleName": "Pris",
+        "movie": "Bladerunner (Director's Cut)",
+        "imageUrl": "http://images5.fanpop.com/image/photos/31000000/Pris-blade-runner-31078086-679-1000.jpg"
+        }, {
+        "id": 1,
+        "firstName": "Harrison",
+        "lastName": "Ford",
+        "roleName": "Deckard",
+        "movie": "Bladerunner (Director's Cut)",
+        "imageUrl": "http://images5.fanpop.com/image/photos/30800000/Deckard-blade-runner-30889936-1066-1600.jpg"
+        }, {
+        "id": 2,
+        "firstName": "Rutger",
+        "lastName": "Hauer",
+        "role": "Roy Batty",
+        "movie": "Bladerunner (Director's Cut)",
+        "imageUrl": "http://orig07.deviantart.net/5a90/f/2014/352/3/9/blade_runner___rutger_hauer_by_maxhitman-d8ac54q.jpg"
         }],
 
     "quote": [{
         "id": 0,
+        "body": "Chew, if only you could see what I've seen with your eyes!",
+        "role": "Roy Batty",
+        "movie": "Bladerunner (Director's Cut)",
+        "image": "http://www.thelunchmovie.com/wp-content/uploads/2011/06/bladeRunner_007a.jpg"
+        }, {
+        "id": 1,
         "body": "We need you, Sebastian. You're our best and only friend.",
         "role": "Pris",
-        "movie": "Bladerunner (Director's Cut)"
-        }]
+        "movie": "Bladerunner (Director's Cut)",
+        "image": "http://www.konbini.com/en/files/2015/06/blade-runner-art-roy-pris.jpg"
+        }, {
+        "id": 2,
+        "body": "Replicants are like any other machine - they're either a benefit or a hazard. If they're a benefit, it's not my problem.",
+        "role": "Deckard",
+        "movie": "Bladerunner (Director's Cut)",
+        "image": "https://cinephiliamedia.files.wordpress.com/2014/01/blade-runner.jpg"
+        }] 
+    }, {
+    "id": 1,
+    "title": "Barbarella",
+    "director": "Roger Vadim",
+    "description": "In the distant future, a highly sexual woman is assigned with finding and stopping the evil Durand-Durand. Along the way, she encounters various unusual people",
+    "image": "http://ia.media-imdb.com/images/M/MV5BMjExMzcwMjU4OV5BMl5BanBnXkFtZTgwNzYzMjU2MTE@._V1_SY1000_CR0,0,683,1000_AL_.jpg",
+
+    "actor":  [{
+        "id": 0,
+        "firstName": "Jane",
+        "lastName": "Fonda",
+        "roleName": "Barbarella",
+        "movie": "Barbarella",
+        "imageUrl": "http://4.bp.blogspot.com/-_K-DgKZys6w/UQsfprGo1mI/AAAAAAAACFY/k-lPmkKdDps/s1600/barbarella.jpg"
+        }, {
+        "id": 1,
+        "firstName": "John",
+        "lastName": "Phillip-Law",
+        "roleName": "Pygar",
+        "movie": "Barbarella",
+        "imageUrl": "http://www.doctormacro.com/Images/Fonda,%20Jane/Annex/NRFPT/Annex%20-%20Fonda,%20Jane%20(Barbarella)_NRFPT_14.jpg"
+        }, {
+        "id": 2,
+        "firstName": "Anita",
+        "lastName": "Pallenberg",
+        "role": "The Great Tyrant",
+        "movie": "Barbarella)",
+        "imageUrl": "http://goldenagehollywood.weebly.com/uploads/3/2/0/7/32077337/2908133.png?300"
+        }],
+
+    "quote": [{
+        "id": 0,
+        "body": "What's that screaming? A good many dramatic situations begin with screaming...",
+        "role": "Barbarella",
+        "movie": "Barbarella",
+        "image": "http://3.bp.blogspot.com/-cC4eywiNv7c/VAbtNqDrrxI/AAAAAAAAO0c/OvWIZgMx4oM/s1600/Jane-Fonda-Barbarella-1968.JPG"
+        }, {
+        "id": 1,
+        "body": "Hello, pretty pretty.",
+        "role": "The Great Tyrant",
+        "movie": "Barbarella",
+        "image": "http://www.nerdist.com/wp-content/uploads/2013/05/Barbarella-5.jpg"
+        }, {
+        "id": 2,
+        "body": "An angel has no memory",
+        "role": "Pygar",
+        "movie": "Barbarella",
+        "image": "http://www.doctormacro.com/Images/Fonda,%20Jane/Annex/NRFPT/Annex%20-%20Fonda,%20Jane%20(Barbarella)_NRFPT_15.jpg"
+        }] 
+    }, {
+    "id": 2,
+    "title": "Dune",
+    "director": "David Lynch",
+    "description": "A Duke's son leads desert warriors against the galactic emperor and his father's evil nemesis when they assassinate his father and free their desert world from the emperor's rule.",
+    "image": "http://ia.media-imdb.com/images/M/MV5BNTkxMjkxNzg3Nl5BMl5BanBnXkFtZTgwNjUyMDI3NjE@._V1_.jpg",
+
+    "actor":  [{
+        "id": 0,
+        "firstName": "Kyle",
+        "lastName": "MacLachlan",
+        "roleName": "Paul Atreides",
+        "movie": "Dune",
+        "imageUrl": "http://1.bp.blogspot.com/-DheybjpHOJs/Udw14fdQGzI/AAAAAAAAYDg/hce3prNDD5g/s1600/Dune+Wallpapers+03.jpg"
+        }, {
+        "id": 1,
+        "firstName": "Linda",
+        "lastName": "Hunt",
+        "roleName": "Shadout Mapes",
+        "movie": "Dune",
+        "imageUrl": "http://cdn.moviestillsdb.com/sm/4cca98b1e48e224a74d7b56b4f868ebd/dune.jpg"
+        }, {
+        "id": 2,
+        "firstName": "Alicia",
+        "lastName": "Witt",
+        "role": "Alia",
+        "movie": "Dune",
+        "imageUrl": "http://www.duneinfo.com/Content/images/arrakis/actors/zoom/alia.jpg"
+        }],
+
+    "quote": [{
+        "id": 0,
+        "body": "It would have killed me!",
+        "role": "Shadout Mapes",
+        "movie": "Dune",
+        "image": "http://www.duneinfo.com/Content/images/giedi-prime/film/dvd-extended/popups/d_maker.jpg"
+        }, {
+        "id": 1,
+        "body": "The Guild... they're fighting me in the mental vaults. They're behind everything. They fear the one who will come, who will know more, who will see more. The Guild is behind everything. It's not finished yet. I'm not formed.",
+        "role": "Alia",
+        "movie": "Dune",
+        "image": "http://i.ytimg.com/vi/y4kLGBdloSg/hqdefault.jpg"
+        }, {
+        "id": 2,
+        "body": "He who can destroy a thing, controls a thing.",
+        "role": "Paul Atreides",
+        "movie": "Dune",
+        "image": "http://www.imagozone.com/var/albums/filme/Dune/Dune%20v%2028.jpg?m=1293068032"
+        }] 
+    }, {
+    "id": 3,
+    "title": "Ex Machina",
+    "director": "Alex Garland",
+    "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a breath-taking humanoid A.I.",
+    "image": "http://ia.media-imdb.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SY1000_CR0,0,674,1000_AL_.jpg",
+
+    "actor":  [{
+        "id": 0,
+        "firstName": "Alicia",
+        "lastName": "Vikander",
+        "roleName": "Eva",
+        "movie": "Ex Machina",
+        "imageUrl": "http://i.ytimg.com/vi/7Ftabq8osrQ/maxresdefault.jpg"
+        }, {
+        "id": 1,
+        "firstName": "Domhnall",
+        "lastName": "Gleeson",
+        "roleName": "Caleb",
+        "movie": "Ex Machina",
+        "imageUrl": "https://www.watsondg.com/sites/default/files/styles/medium/public/project/stills/caleb_intro_v2.jpg?itok=PUSuxgkV"
+        }, {
+        "id": 2,
+        "firstName": "Oscar",
+        "lastName": "Isaac",
+        "role": "Nathan",
+        "movie": "Ex Machina",
+        "imageUrl": "https://www.watsondg.com/sites/default/files/styles/medium/public/project/stills/nathan_intro_v2.png?itok=JaEgLxkO"
+        }],
+
+    "quote": [{
+        "id": 0,
+        "body": "Isn't it strange, to create something that hates you?",
+        "role": "Eva",
+        "movie": "Ex Machina",
+        "image": "http://blogs-images.forbes.com/markhughes/files/2015/04/EX-MACHINA-23.png"
+        }, {
+        "id": 1,
+        "body": "One day the AIs are going to look back on us the same way we look at fossil skeletons on the plains of Africa. An upright ape living in dust with crude language and tools, all set for extinction",
+        "role": "Nathan",
+        "movie": "Ex Machina",
+        "image": "http://www.gannett-cdn.com/-mm-/b64232029576481aaedac2ea6cd51afcbde18820/c=0-181-4253-2584&r=x1683&c=3200x1680/local/-/media/2015/04/07/USATODAY/USATODAY/635640213403707717-XXX-EX-MACHINA-MOV-JY-5552-72150680.JPG"
+        }, {
+        "id": 2,
+        "body": "You hacked the world's cell phones?",
+        "role": "Caleb",
+        "movie": "Ex Machina",
+        "image": "http://i2.wp.com/bitcast-a-sm.bitgravity.com/slashfilm/wp/wp-content/images/Ex-Machina.jpg"
+        }] 
     }]
 }
