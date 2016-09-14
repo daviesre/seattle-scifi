@@ -20,6 +20,7 @@ import { AddQuoteComponent } from './add-quote.component';
         <add-quote></add-quote>
     `
 })
+
 export class QuoteListComponent {
     public quoteList: Quote[];
 
@@ -28,10 +29,10 @@ export class QuoteListComponent {
 
     constructor() {
         this.quoteList = [
-            new Quote(0, "We need you, Sebastian. You're our best and only friend.", "Pris", "Bladerunner"),
-            new Quote(1, "Isn't it strange, to create something that hates you?", "Ava", "Ex Machine"),
-            new Quote(2, "Stilgar, do we have wormsign?", "Paul", "Dune"),
-            new Quote(3, "My name isn't pretty-pretty, it's Barbarella.", "Barbarella", "Barbarella")
+            new Quote(0, "We need you, Sebastian. You're our best and only friend.", "Pris", "Bladerunner", "http://www.konbini.com/en/files/2015/06/blade-runner-art-roy-pris.jpg"),
+            new Quote(1, "Isn't it strange, to create something that hates you?", "Ava", "Ex Machine", "https://www.neondystopia.com/wp-content/uploads/2015/06/Ex-Machina-Cast-Wallpapers.jpg"),
+            new Quote(2, "Stilgar, do we have wormsign?", "Paul", "Dune", "http://www.fightbait.com/wp-content/uploads/2011/08/DuneSW.jpg"),
+            new Quote(3, "My name isn't pretty-pretty, it's Barbarella.", "Barbarella", "Barbarella", "http://nukethefridge.com/wp-content/uploads/2014/01/Barbarella2.jpg")
         ];
         this.onQuoteSelect = new EventEmitter();
     }
