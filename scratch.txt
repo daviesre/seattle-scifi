@@ -5,7 +5,6 @@ EditMovieDetailsComponent
 import { EditMovieDetailsComponent } from './edit-movie-details.component';
 `<edit-movie-details *ngIf="selectedMovie" [movie]="selectedMovie"></edit-movie-details>`
 
-
 AddMovieComponent
 import { AddMovieComponent } from './add-movie.component';
 `<add-movie (onSubmitAddMovie)="createMovie($event)"></add-movie>`
@@ -21,12 +20,39 @@ createMovie(movie) : void {
   );
 }
 
+
 AddActorComponent
 import { AddActorComponent } from './add-actor.component';
 `<add-actor (onSubmitAddActor)="createActor($event)"></add-actor>`
   providers: [ActorService]
+  createActor(actor) : void {
+    this.actorList.push(
+      new Actor(
+        actor.id,
+        actor.firstName,
+        actor.lastName,
+        actor.role,
+        actor.movie,
+        actor.imageUrl)
+    );
+  }
+
+EditActorDetailsComponent
+import { EditActorDetailsComponent } from './edit-actor-details.component';
+`  <edit-actor-details *ngIf="selectedActor" [actor]="selectedActor"></edit-actor-details>`
 
 
+AddQuoteComponent
+import { AddQuoteComponent } from './add-quote.component';
+`<add-quote (onSubmitNewQuote)="createQuote($event)"></add-quote>`
+createQuote(quote: Quote): void {
+    this.quoteList.push(quote);
+}
+
+
+EditQuoteDetailsComponent
+import { EditQuoteDetailsComponent } from './edit-quote-details.component';
+`<edit-quote-details *ngIf="selectedQuote" [quote]="selectedQuote"></edit-quote-details>`
 
 pipes: [EraPipe],
 import { EraPipe } from './era.pipe';

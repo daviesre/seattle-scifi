@@ -1,6 +1,7 @@
 import { Component } from 'angular2/core';
 import { Actor } from './actor.model';
 
+
 @Component({
   selector: 'edit-actor-details',
   inputs: ['actor'],
