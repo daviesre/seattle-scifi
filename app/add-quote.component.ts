@@ -8,8 +8,9 @@ import { Quote } from './quote.model';
     <div class="quote-form">
       <h3>Create a New Quote</h3>
       <input placeholder="Body" class="col-sm-6 input-lg" #newBody>
-      <input placeholder="Role" class="col-sm-3 input-lg" #newRole>
-      <input placeholder="Movie" class="col-sm-3 input-lg" #newMovie>
+      <input placeholder="Role" class="col-sm-2 input-lg" #newRole>
+      <input placeholder="Movie" class="col-sm-2 input-lg" #newMovie>
+      <input placeholder="Image" class="col-sm-2 input-lg" #newImage>
       <button (click)="addQuote(newBody, newRole, newMovie)">Add</button>
     </div>
   `
@@ -20,8 +21,8 @@ export class AddQuoteComponent{
     this.onSubmitNewQuote = new EventEmitter();
   }
 
-  addQuote(newBody: HTMLInputElement, newRole: HTMLInputElement, newMovie: HTMLInputElement) {
-    var newQuote = new Quote(0, newBody.value, newRole.value, newMovie.value);
+  addQuote(newBody: HTMLInputElement, newRole: HTMLInputElement, newMovie: HTMLInputElement, newImage: HTMLInputElement) {
+    var newQuote = new Quote(0, newBody.value, newRole.value, newMovie.value, newImage.value);
     console.log(newQuote);
     this.onSubmitNewQuote.emit(newQuote);
     newBody.value="";
