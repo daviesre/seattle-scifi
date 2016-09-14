@@ -16,7 +16,11 @@ import { EraPipe } from './era.pipe';
     <select (change)="onChange($event.target.value)">
       <option value="all" selected="selected">Show All Movies</option>
       <option value="isGoldenAge">Golden Age (30s-40s)</option>
+      <option value="is50s">1950s (50s)</option>
       <option value="isNewWave">New Wave (60s-70s)</option>
+      <option value="is80s"> 1980s (80s)</option>
+      <option value="is90s"> 1990s (90s)</option>
+      <option value="isCurrent">Current Sci-Fi (2000-Current)</option>
     </select>
   </div>
     <movie-display *ngFor="#currentMovie of movieList | movieEra:selectedMovie"

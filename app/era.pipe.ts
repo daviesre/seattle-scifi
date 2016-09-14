@@ -17,12 +17,37 @@ export class EraPipe implements PipeTransform {
         }
       }
     } else if (movieYear === "isGoldenAge") {
-      for (let i = 0; i < input.length; i++) {
+      for (var i = 0; i < input.length; i++) {
         if (input[i].year > 1937 && input[i].year < 1947) {
           output.push(input[i]);
         }
       }
-    } else {
+    } else if (movieYear === "isCurrent") {
+      for(var i = 0; i < input.length; i++) {
+        if(input[i].year > 1999) {
+          output.push(input[i]);
+        }
+      }
+    } else if (movieYear === "is50s") {
+      for(var i = 0; i < input.length; i++) {
+        if(input[i].year > 1949 && input[i].year < 1960) {
+          output.push(input[i]);
+        }
+      }
+    } else if (movieYear === "is80s") {
+      for(var i = 0; i < input.length; i++) {
+        if (input[i].year > 1979 && input[i].year < 1990) {
+          output.push(input[i]);
+        }
+      }
+    } else if (movieYear === "is90s") {
+      for(var i = 0; i < input.length; i++) {
+        if(input[i].year > 1989 && input[i].year < 2000) {
+          output.push(input[i]);
+        }
+      }
+    }
+    else {
       return input;
     }
     return output;
