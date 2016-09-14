@@ -1,19 +1,19 @@
 // import Component code from angulary library
 import { Component } from 'angular2/core';
 import { Movie } from "./movie.model";
-import { MovieListComponent } from "./movie-list.component";
+import { CollectedListComponent } from "./collected-list.component";
 
 // annotation
 @Component({
   selector: 'my-app',
-  directives: [MovieListComponent],
+  directives: [CollectedListComponent],
   template: `
     <div class = "container">
       <img class="logo-image" src="./resources/images/logo.png" alt="a logo of a spaceship">
     </div>
 
     <div class="container">
-      <movie-list></movie-list>
+      <collected-list></collected-list>
     </div>
   `
 })
