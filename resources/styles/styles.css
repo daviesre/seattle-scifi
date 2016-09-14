@@ -1,6 +1,18 @@
 .logo-image {
   margin-top:20px;
-  margin-bottom:20px
+  margin-bottom:20px;
+}
+
+.movie-id {
+  float:left;
+  width:30%;
+}
+
+.movie-description {
+  float:left;
+  width:40%;
+  margin-left:30px;
+  margin-top:60px;
 }
 
 .actor-image {
