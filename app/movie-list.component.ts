@@ -1,16 +1,17 @@
 import { Movie } from './movie.model';
-import { Component } from 'angular2/core';
+import { Component, EventEmitter } from 'angular2/core';
 import { MovieComponent } from './movie.component';
 import { AddMovieComponent } from './add-movie.component';
 import { ActorListComponent } from './actor-list.component';
 import { QuoteListComponent } from './quote-list.component';
+import { EditMovieDetailsComponent } from './edit-movie-details.component';
 import { EraPipe } from './era.pipe';
 
 @Component({
   selector: 'movie-list',
   inputs: ['movieList'],
   pipes: [EraPipe],
-  directives: [MovieComponent, AddMovieComponent, ActorListComponent, QuoteListComponent],
+  directives: [MovieComponent, AddMovieComponent, ActorListComponent, EditMovieDetailsComponent, QuoteListComponent],
   template: `
   <div class="era-filter">
     <select (change)="onChange($event.target.value)">
@@ -23,8 +24,11 @@ import { EraPipe } from './era.pipe';
       <option value="isCurrent">Current Sci-Fi (2000-Current)</option>
     </select>
   </div>
-    <movie-display *ngFor="#currentMovie of movieList | movieEra:selectedMovie"
+    <movie-display *ngFor="#currentMovie of movieList | movieEra:selectedEra"
+      (click)="movieClicked(currentMovie)"
+      [class.selected]="currentMovie === selectedMeal"
       [movie]="currentMovie"></movie-display>
+      <edit-movie-details *ngIf="selectedMovie" [movie]="selectedMovie"></edit-movie-details>
       <add-movie (onSubmitAddMovie)="createMovie($event)"></add-movie>
       <hr>
       <actor-list></actor-list>
@@ -34,9 +38,11 @@ import { EraPipe } from './era.pipe';
 })
 export class MovieListComponent {
   public movieList: Movie[];
-  public selectedMovie: string = "all";
+  public onMovieSelect: EventEmitter<Movie>;
+  public selectedMovie: Movie;
+  public selectedEra: string = "all";
   onChange(optionFromMenu) {
-    this.selectedMovie = optionFromMenu;
+    this.selectedEra = optionFromMenu;
   }
 
   constructor() {
@@ -50,6 +56,12 @@ export class MovieListComponent {
       new Movie(3, 2015, "Ex Machina", "Alex Garland", "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a breath-taking humanoid A.I.", "http://ia.media-imdb.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SY1000_CR0,0,674,1000_AL_.jpg")
     ];
   }
+
+  movieClicked(clickedMovie: Movie) : void {
+    this.selectedMovie = clickedMovie;
+    console.log(clickedMovie);
+  }
+
   createMovie(movie) : void {
     this.movieList.push(
       new Movie(
