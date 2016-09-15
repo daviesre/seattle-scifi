@@ -9,16 +9,12 @@ import { ActorComponent } from './actor.component';
   directives: [ActorComponent], //update directive needed later
   template:
   `
-
+  <h3>Actors</h3>
   <actor-display *ngFor="#currentMovie of model"
     [model]="currentMovie">
   </actor-display>
   `,
 })
 export class ActorListComponent {
-  // @Input() model: any;
-  public content;
-  // public actorList;
-
 
 }

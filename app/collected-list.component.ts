@@ -18,30 +18,19 @@ declare var $:any
   template: `
     <div class="container">
       <div class="rows row">
+
         <div class="col-md-4">
-          <div *ngFor="#item of content">
-              <p><img src={{item.image}} height="150" width="115"></p>
-              <h4> {{item.title}} </h4>
-              <p>A film by {{item.director}}</p>
-              <p>{{item.description}}</p>
-          </div>
+          <movie-list [model]="content"></movie-list>
         </div>
 
         <div class="col-md-4">
           <actor-list [model]="content"></actor-list>
         </div>
+
         <div class="col-md-4">
-          <div *ngFor="#item of content">
-            <div *ngFor="#quote of item.quote">
-              <div class="col-md-6">
-                <p align-vertical="middle"><em> {{quote.body}}</em></p>
-              </div>
-              <div class="col-md-6">
-              <p><img src={{quote.image}} height="150" width="235"></p>
-              </div>
-            </div>
-          </div>
+          <quote-list [model]="content"></quote-list>
         </div>
+
       </div>
       <div class="row">
         <score-list></score-list>
