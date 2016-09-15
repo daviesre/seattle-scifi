@@ -26,13 +26,9 @@ declare var $:any
               <p>{{item.description}}</p>
           </div>
         </div>
+
         <div class="col-md-4">
-          <div *ngFor="#item of content">
-            <div *ngFor="#actor of item.actor">
-                <p><img src={{actor.imageUrl}} height="150" width="110"></p>
-                <h4> {{actor.roleName}} </h4>
-            </div>
-          </div>
+          <actor-list [model]="content"></actor-list>
         </div>
         <div class="col-md-4">
           <div *ngFor="#item of content">
