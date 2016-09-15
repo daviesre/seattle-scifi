@@ -12,7 +12,13 @@ declare var $:any
   template:
   `
   <h3>High Scores!</h3>
-  <button class="btn btn-info" (click)="postScore({'name': 'TestPerson', 'points': 100})">Click to add test score data</button>
+  <button class="btn btn-success"
+    (click)="postScore({'name': 'TestPerson', 'points': 100})">
+    Click to add test score data
+  </button>
+  <button class="btn btn-info" (click)="refreshScores()">
+    Click to refresh score data
+  </button>
   <score-display *ngFor="#currentScore of scores"
     [score]="currentScore">
   </score-display>
@@ -29,6 +35,10 @@ export class ScoreListComponent {
   ngOnInit() {
     var self=this;
     this.getScores(self);
+  }
+
+  refreshScores() {
+    this.sortJson(this.scores, "points", "int", false);
   }
 
   //for testing - belongs in a scoring component or within the game component
@@ -53,7 +63,29 @@ export class ScoreListComponent {
       success: function (data) {
           console.log(data);
           self.scores = data;
+          self.refreshScores();
       }
     });
+  }
+  sortJson(element, prop, propType, asc) {
+  switch (propType) {
+    case "int":
+      element = element.sort(function (a, b) {
+        if (asc) {
+          return (parseInt(a[prop]) > parseInt(b[prop])) ? 1 : ((parseInt(a[prop]) < parseInt(b[prop])) ? -1 : 0);
+        } else {
+          return (parseInt(b[prop]) > parseInt(a[prop])) ? 1 : ((parseInt(b[prop]) < parseInt(a[prop])) ? -1 : 0);
+        }
+      });
+      break;
+    default:
+      element = element.sort(function (a, b) {
+        if (asc) {
+          return (a[prop].toLowerCase() > b[prop].toLowerCase()) ? 1 : ((a[prop].toLowerCase() < b[prop].toLowerCase()) ? -1 : 0);
+        } else {
+          return (b[prop].toLowerCase() > a[prop].toLowerCase()) ? 1 : ((b[prop].toLowerCase() < a[prop].toLowerCase()) ? -1 : 0);
+        }
+      });
+    }
   }
 }

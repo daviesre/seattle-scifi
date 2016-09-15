@@ -19,6 +19,11 @@
       "id": 3,
       "name": "Dave Franco",
       "points": 1000
+    },
+    {
+      "name": "TestPerson",
+      "points": 100,
+      "id": 4
     }
   ]
 }
