@@ -42,10 +42,6 @@ export class CollectedListComponent{
     var self=this;
     this.getContent(self); }
 
-  sendData(data){
-    this.content = data;
-  }
-
   getContent(self): any {
     var theUrl = "http:\/\/localhost:4200/movie";
     var theData;
@@ -60,15 +56,9 @@ export class CollectedListComponent{
       url: theUrl,
       data: JSON.stringify(theData),
       success: function (data) {
-          console.log(this.content);
           console.log(data);
-          console.log(data[0].title);
           self.content = data;
-          console.log(this.content);
-          return this.content;
       }
-    }).then(function(data) {
-      this.sendData(data);
     });
   }
 
