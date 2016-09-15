@@ -12,17 +12,17 @@ export class GameLogicService {
 
   setActorMovie(movie) {
     this.actorMovie = movie;
-    this.testForWin();
+    return this.testForWin();
   }
 
   setMovieTitle(movie) {
     this.movieTitle = movie;
-    this.testForWin();
+    return this.testForWin();
   }
 
   setQuoteTitle(movie) {
     this.quoteMovie = movie;
-    this.testForWin();
+    return this.testForWin();
   }
 
   testForWin() {
@@ -31,16 +31,19 @@ export class GameLogicService {
       this.actorMovie = undefined;
       this.movieTitle = undefined;
       this.quoteMovie = undefined;
+      return true;
     } else if ( this.movieTitle === undefined ||
                 this.actorMovie === undefined ||
                 this.quoteMovie === undefined
               ){
       console.log("ok, keep trying!");
+      return false;
     } else {
       console.log("Please try again");
       this.actorMovie = undefined;
       this.movieTitle = undefined;
       this.quoteMovie = undefined;
+      return false;
     }
   }
 }
