@@ -42,6 +42,7 @@ declare var $:any
 })
 export class CollectedListComponent{
   content;
+  points;
   constructor(private contentService: ContentService, private gameLogicService: GameLogicService) {
 
   }
