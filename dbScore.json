@@ -1,54 +1,28 @@
 {
-  "score": [
-    {
-      "id": 0,
-      "name": "Benson Willoughby",
-      "points": 30
+  "score" : {
+    "-KRiKyW8rTOQpNdlVnnj" : {
+      "name" : "TestPerson",
+      "points" : 100
     },
-    {
-      "id": 1,
-      "name": "Renson Billoughy",
-      "points": 300
+    "-KRiMGFRYmzYOReSKBDz" : {
+      "name" : "TestPerson",
+      "points" : 100
     },
-    {
-      "id": 2,
-      "name": "Denson Rillowy",
-      "points": 24
+    "-KRiMGLJq9i7vBcxODlc" : {
+      "name" : "TestPerson",
+      "points" : 100
     },
-    {
-      "id": 3,
-      "name": "Dave Franco",
-      "points": 1000
+    "-KRiMGS_ysoJ6OEi2M-t" : {
+      "name" : "TestPerson",
+      "points" : 100
     },
-    {
-      "name": "TestPerson",
-      "points": 100,
-      "id": 4
+    "-KRiMGXxUeh3ijTeON9y" : {
+      "name" : "TestPerson",
+      "points" : 100
     },
-    {
-      "name": "TestPerson",
-      "points": 100,
-      "id": 5
-    },
-    {
-      "name": "TestPerson",
-      "points": 100,
-      "id": 6
-    },
-    {
-      "name": "TestPerson",
-      "points": 100,
-      "id": 7
-    },
-    {
-      "name": "TestPerson",
-      "points": 100,
-      "id": 8
-    },
-    {
-      "name": "TestPerson",
-      "points": 100,
-      "id": 9
+    "-KRiMG_gHvOlQMjId8Tc" : {
+      "name" : "TestPerson",
+      "points" : 100
     }
-  ]
+  }
 }

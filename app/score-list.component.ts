@@ -26,7 +26,7 @@ declare var $:any
   providers: [ScoreService]
 })
 export class ScoreListComponent {
-  scores;
+  scores: {};
   object;
 
   constructor(private scoreService: ScoreService) {
@@ -35,6 +35,16 @@ export class ScoreListComponent {
   ngOnInit() {
     var self=this;
     this.getScores(self);
+  }
+
+  pushDataToArray(data) {
+    var theDataArray: Object[] = [];
+    for (var key in data) {
+        var obj = data[key];
+        theDataArray.push(obj)
+    }
+    this.scores = theDataArray;
+    this.refreshScores();
   }
 
   refreshScores() {
@@ -50,7 +60,7 @@ export class ScoreListComponent {
   //end test method
 
   getScores(self): any {
-    var theUrl = "http:\/\/localhost:4200/score";
+    var theUrl = "https://ng-test-adb57.firebaseio.com/score.json";
     var theData;
 
     $.ajax({
@@ -63,13 +73,13 @@ export class ScoreListComponent {
       url: theUrl,
       data: JSON.stringify(theData),
       success: function (data) {
-          console.log(data);
-          self.scores = data;
-          //had to put refresh inside get request
-          self.refreshScores();
+          //Have to push data from Firebase to array to deal with Angular2
+          self.pushDataToArray(data);
       }
     });
   }
+
+  //Sort method for JSON by point value: http://stackoverflow.com/questions/881510/sorting-json-by-values
   sortJson(element, prop, propType, asc) {
   switch (propType) {
     case "int":

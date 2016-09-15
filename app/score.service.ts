@@ -6,7 +6,7 @@ declare var $:any
 export class ScoreService {
 
   postScores(score): any {
-    var theUrl = "http:\/\/localhost:4200/score";
+    var theUrl = "https://ng-test-adb57.firebaseio.com/score.json";
 
     $.ajax({
       type: "POST",
