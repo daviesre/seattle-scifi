@@ -34,10 +34,11 @@ export class ScoreListComponent {
   }
   ngOnInit() {
     var self=this;
-    this.getScores(self);
+    this.getScores();
   }
 
   pushDataToArray(data) {
+    //this is called from getScores()
     var theDataArray: Object[] = [];
     for (var key in data) {
         var obj = data[key];
@@ -48,35 +49,19 @@ export class ScoreListComponent {
   }
 
   refreshScores() {
+    //this is called from pushDataToArray()
     this.sortJson(this.scores, "points", "int", false);
   }
 
-  //for testing - belongs in a scoring component or within the game component
   postScore(score) {
     var self=this;
     this.scoreService.postScores(score);
-    this.getScores(self);
+    this.getScores();
   }
-  //end test method
 
-  getScores(self): any {
-    var theUrl = "https://ng-test-adb57.firebaseio.com/score.json";
-    var theData;
-
-    $.ajax({
-      type: "GET",
-      headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-      },
-      dataType: "json",
-      url: theUrl,
-      data: JSON.stringify(theData),
-      success: function (data) {
-          //Have to push data from Firebase to array to deal with Angular2
-          self.pushDataToArray(data);
-      }
-    });
+  getScores() {
+    var self=this;
+    this.scoreService.getScores(self);
   }
 
   //Sort method for JSON by point value: http://stackoverflow.com/questions/881510/sorting-json-by-values
