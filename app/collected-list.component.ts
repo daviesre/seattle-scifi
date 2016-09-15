@@ -15,8 +15,6 @@ declare var $:any
   inputs: ['collectedList'],
   directives: [MovieListComponent, ActorListComponent, QuoteListComponent],
   template: `
-  <h1 (click)="getContent()">{{content}} hiiiii</h1>
-  <li *ngFor="#item of content">{{item.title}} hey hey hello</li>
     <div class="container">
       <div class="rows">
         <div class="col-md-4">
