@@ -23,6 +23,7 @@ export class ContentService {
           console.log(data[0].title);
           console.log(data[0].actor[0].firstName);
           console.log(data[0].quote[0].body);
+          theData = data;
           return data;
       }
     });

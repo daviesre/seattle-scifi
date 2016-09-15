@@ -15,6 +15,8 @@ declare var $:any
   inputs: ['collectedList'],
   directives: [MovieListComponent, ActorListComponent, QuoteListComponent],
   template: `
+  <h1 (click)="getContent()">{{content}} hiiiii</h1>
+  <li *ngFor="#item of content">{{item.title}} hey hey hello</li>
     <div class="container">
       <div class="rows">
         <div class="col-md-4">
@@ -32,15 +34,37 @@ declare var $:any
   providers: [ContentService]
 })
 export class CollectedListComponent{
-  public content: Object[];
+  content;
   constructor(private contentService: ContentService) {
 
   }
-  ngOnInit() { this.getContent(); }
+  ngOnInit() {
+    var self=this;
+    this.getContent(self); }
 
-  getContent() {
-    this.content = this.contentService.getContent();
-    console.log("HALP!");
+  getContent(self): any {
+    var theUrl = "http:\/\/localhost:4200/movie";
+    var theData;
+
+    $.ajax({
+      type: "GET",
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+      },
+      dataType: "json",
+      url: theUrl,
+      data: JSON.stringify(theData),
+      success: function (data) {
+          console.log(data);
+          self.content = data;
+      }
+    });
   }
+
+  // getContent() {
+  //   this.content = this.contentService.getContent();
+  //   console.log("HALP!");
+  // }
 
 }
