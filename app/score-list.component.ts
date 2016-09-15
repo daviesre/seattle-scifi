@@ -11,17 +11,19 @@ declare var $:any
   directives: [ScoreComponent], //update directive needed later
   template:
   `
-  <h3>High Scores!</h3>
-  <button class="btn btn-success"
-    (click)="postScore({'name': 'TestPerson', 'points': 100})">
-    Click to add test score data
-  </button>
-  <button class="btn btn-info" (click)="refreshScores()">
-    Click to refresh score data
-  </button>
-  <score-display *ngFor="#currentScore of scores"
-    [score]="currentScore">
-  </score-display>
+  <div class="score-board">
+    <h3>High Scores!</h3>
+    <button class="btn btn-success"
+      (click)="postScore({'name': 'TestPerson', 'points': 100})">
+      Click to add test score data
+    </button>
+    <button class="btn btn-info" (click)="refreshScores()">
+      Click to refresh score data
+    </button>
+    <score-display *ngFor="#currentScore of scores"
+      [score]="currentScore">
+    </score-display>
+  </div>
   `,
   providers: [ScoreService]
 })
