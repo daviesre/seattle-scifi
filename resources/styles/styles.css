@@ -1,3 +1,8 @@
+body {
+  background-color: #ACBCBD;
+  font-family: 'Orbitron', sans-serif;
+}
+
 .logo-image {
   margin-top:20px;
   margin-bottom:20px;
@@ -11,30 +16,48 @@
   font-family: 'Orbitron', sans-serif;
 }
 
+.heading {
+  font-family: 'Orbitron', sans-serif;
+}
+
 .game-title {
   float: right;
   padding-top: 40px;
   padding-right: 200px;
 }
 
-body {
-  background-color: #ACBCBD;
-}
-
-/*.movie-id {
-  float:left;
-  width:30%;
-}
-
-.movie-description {
-  float:left;
-  width:40%;
-  margin-left:30px;
-  margin-top:60px;
-}*/
-
 .actor-image {
   width: 125px;
+}
+
+figcaption {
+  display: none;
+  font-family: 'Teko';
+  font-size: 2em;
+}
+
+figure:hover figcaption {
+  display: block;
+}
+
+.quote-block {
+  background-color: steelblue;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.quote-text {
+  padding-top: 20px;
+  font-size: 2em;
+  font-family: 'Teko', bold;
+  color: white;
+
+}
+
+.temp-hide {
+  display: none;
 }
 
 .body-wrapper {

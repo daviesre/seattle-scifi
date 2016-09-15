@@ -8,7 +8,7 @@ import { MovieComponent } from './movie.component';
   inputs: ['model'],
   directives: [MovieComponent],
   template: `
-    <h3>Movies</h3>
+  <h3 class="heading">Film: </h3>
     <movie-display *ngFor="#currentMovie of model"
       [model]="currentMovie"></movie-display>
   `
