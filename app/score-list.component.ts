@@ -13,12 +13,9 @@ declare var $:any
   `
   <div class="score-board">
     <h3>High Scores!</h3>
-    <button class="btn btn-success"
+    <button class="btn btn-success score-btn"
       (click)="postScore({'name': 'TestPerson', 'points': 100})">
       Click to add test score data
-    </button>
-    <button class="btn btn-info" (click)="refreshScores()">
-      Click to refresh score data
     </button>
     <score-display *ngFor="#currentScore of scores"
       [score]="currentScore">
