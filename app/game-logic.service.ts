@@ -44,7 +44,7 @@ export class GameLogicService {
               ){
       console.log("ok, keep trying!");
     } else {
-      console.log("Please try again");
+      alert("You lose, please try again");
       this.actorMovie = undefined;
       this.movieTitle = undefined;
       this.actorRoleName = undefined;
