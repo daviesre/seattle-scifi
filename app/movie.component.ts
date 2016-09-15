@@ -1,14 +1,26 @@
 import { Movie } from './movie.model';
-import { Component } from 'angular2/core';
+import { Component, Input } from 'angular2/core';
+import { GameLogicService } from './game-logic.service';
 
 @Component({
   selector: 'movie-display',
-  inputs: ['movie'],
+  inputs: ['model'],
   template: `
-    <h3>{{ movie.title }}</h3>
-    <h2><img height="200" width="auto" src={{movie.image}}></h2>
+  <div (click)="movieClicked(model)">
+    <h2><img height="200" width="auto" src={{model.image}}></h2>
+    <h3>{{ model.title }}</h3>
+    <h4>Directed by {{ model.director }}</h4>
+    <h5> {{ model.description }}</h5>
+  </div>
   `
 })
 export class MovieComponent {
-  public movie: Movie;
+
+  constructor(private gameLogicService: GameLogicService) {
+
+  }
+
+  movieClicked(clickedMovie) {
+    this.gameLogicService.setMovieTitle(clickedMovie.title);
+  }
 }
