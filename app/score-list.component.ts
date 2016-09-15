@@ -43,7 +43,9 @@ export class ScoreListComponent {
 
   //for testing - belongs in a scoring component or within the game component
   postScore(score) {
+    var self=this;
     this.scoreService.postScores(score);
+    this.getScores(self);
   }
   //end test method
 
@@ -63,6 +65,7 @@ export class ScoreListComponent {
       success: function (data) {
           console.log(data);
           self.scores = data;
+          //had to put refresh inside get request
           self.refreshScores();
       }
     });
