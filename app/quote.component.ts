@@ -21,7 +21,7 @@ export class QuoteComponent {
 
   }
 
-  quoteClicked(clickedQuote) : void {
-    this.gameLogicService.setQuoteTitle(clickedQuote.movie);
+  quoteClicked(clickedQuote) {
+    this.gameLogicService.setQuoteRole(clickedQuote.role);
   }
 }
