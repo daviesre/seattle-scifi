@@ -1,0 +1,74 @@
+{ "quote": [{
+    "id": 0,
+    "body": "Chew, if only you could see what I've seen with your eyes!",
+    "role": "Roy Batty",
+    "movie": "Bladerunner (Director's Cut)",
+    "image": "http://www.thelunchmovie.com/wp-content/uploads/2011/06/bladeRunner_007a.jpg"
+    }, {
+    "id": 1,
+    "body": "We need you, Sebastian. You're our best and only friend.",
+    "role": "Pris",
+    "movie": "Bladerunner (Director's Cut)",
+    "image": "http://www.konbini.com/en/files/2015/06/blade-runner-art-roy-pris.jpg"
+    }, {
+    "id": 2,
+    "body": "Replicants are like any other machine - they're either a benefit or a hazard. If they're a benefit, it's not my problem.",
+    "role": "Deckard",
+    "movie": "Bladerunner (Director's Cut)",
+    "image": "https://cinephiliamedia.files.wordpress.com/2014/01/blade-runner.jpg"
+    }, {
+    "id": 3,
+    "body": "What's that screaming? A good many dramatic situations begin with screaming...",
+    "role": "Barbarella",
+    "movie": "Barbarella",
+    "image": "http://3.bp.blogspot.com/-cC4eywiNv7c/VAbtNqDrrxI/AAAAAAAAO0c/OvWIZgMx4oM/s1600/Jane-Fonda-Barbarella-1968.JPG"
+    }, {
+    "id": 4,
+    "body": "Hello, pretty pretty.",
+    "role": "The Great Tyrant",
+    "movie": "Barbarella",
+    "image": "http://www.nerdist.com/wp-content/uploads/2013/05/Barbarella-5.jpg"
+    }, {
+    "id": 5,
+    "body": "An angel has no memory",
+    "role": "Pygar",
+    "movie": "Barbarella",
+    "image": "http://www.doctormacro.com/Images/Fonda,%20Jane/Annex/NRFPT/Annex%20-%20Fonda,%20Jane%20(Barbarella)_NRFPT_15.jpg"
+    }, {
+    "id": 6,
+    "body": "It would have killed me!",
+    "role": "Shadout Mapes",
+    "movie": "Dune",
+    "image": "http://www.duneinfo.com/Content/images/giedi-prime/film/dvd-extended/popups/d_maker.jpg"
+    }, {
+    "id": 7,
+    "body": "The Guild... they're fighting me in the mental vaults. They're behind everything. They fear the one who will come, who will know more, who will see more. The Guild is behind everything. It's not finished yet. I'm not formed.",
+    "role": "Alia",
+    "movie": "Dune",
+    "image": "http://i.ytimg.com/vi/y4kLGBdloSg/hqdefault.jpg"
+    }, {
+    "id": 8,
+    "body": "He who can destroy a thing, controls a thing.",
+    "role": "Paul Atreides",
+    "movie": "Dune",
+    "image": "http://www.imagozone.com/var/albums/filme/Dune/Dune%20v%2028.jpg?m=1293068032"
+    }, {
+    "id": 9,
+    "body": "Isn't it strange, to create something that hates you?",
+    "role": "Eva",
+    "movie": "Ex Machina",
+    "image": "http://blogs-images.forbes.com/markhughes/files/2015/04/EX-MACHINA-23.png"
+    }, {
+    "id": 10,
+    "body": "One day the AIs are going to look back on us the same way we look at fossil skeletons on the plains of Africa. An upright ape living in dust with crude language and tools, all set for extinction",
+    "role": "Nathan",
+    "movie": "Ex Machina",
+    "image": "http://www.gannett-cdn.com/-mm-/b64232029576481aaedac2ea6cd51afcbde18820/c=0-181-4253-2584&r=x1683&c=3200x1680/local/-/media/2015/04/07/USATODAY/USATODAY/635640213403707717-XXX-EX-MACHINA-MOV-JY-5552-72150680.JPG"
+    }, {
+    "id": 11,
+    "body": "You hacked the world's cell phones?",
+    "role": "Caleb",
+    "movie": "Ex Machina",
+    "image": "http://i2.wp.com/bitcast-a-sm.bitgravity.com/slashfilm/wp/wp-content/images/Ex-Machina.jpg"
+    }]
+}

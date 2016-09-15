@@ -15,18 +15,35 @@ declare var $:any
   inputs: ['collectedList'],
   directives: [MovieListComponent, ActorListComponent, QuoteListComponent],
   template: `
-  <h1 (click)="getContent()">{{content}} hiiiii</h1>
-  <li *ngFor="#item of content">{{item.title}} hey hey hello</li>
     <div class="container">
       <div class="rows">
         <div class="col-md-4">
-          <movie-list></movie-list>
+          <div *ngFor="#item of content">
+              <p><img src={{item.image}} height="125" width="100"></p>
+              <h4> {{item.title}} </h4>
+              <p>A film by {{item.director}}</p>
+              <p>{{item.description}}</p>
+          </div>
         </div>
         <div class="col-md-4">
-          <actor-list></actor-list>
+          <div *ngFor="#item of content">
+            <div *ngFor="#actor of item.actor">
+                <p><img src={{actor.imageUrl}} height="120" width="110"></p>
+                <h4> {{actor.roleName}} </h4>
+            </div>
+          </div>
         </div>
         <div class="col-md-4">
-          <quote-list></quote-list>
+          <div *ngFor="#item of content">
+            <div *ngFor="#quote of item.quote">
+              <div class="col-md-6">
+                <p align-vertical="middle"><em> {{quote.body}}</em></p>
+              </div>
+              <div class="col-md-6">
+              <p><img src={{quote.image}} height="125" width="200"></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
