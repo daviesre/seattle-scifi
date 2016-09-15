@@ -22,7 +22,6 @@ export class ActorComponent {
   }
 
   actorClicked(clickedActor) {
-    this.gameLogicService.setActorMovie(clickedActor.movie);
-    // this.getServiceResults()
+    this.gameLogicService.setActorInfo(clickedActor.movie, clickedActor.roleName);
   }
 }

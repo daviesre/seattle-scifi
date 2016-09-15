@@ -4,14 +4,16 @@ import { Injectable } from 'angular2/core';
 export class GameLogicService {
   movieTitle;
   actorMovie;
-  quoteMovie;
+  actorRoleName;
+  quoteRole;
 
   constructor() {
 
   }
 
-  setActorMovie(movie) {
+  setActorInfo(movie, roleName) {
     this.actorMovie = movie;
+    this.actorRoleName = roleName;
     this.testForWin();
   }
 
@@ -20,27 +22,33 @@ export class GameLogicService {
     this.testForWin();
   }
 
-  setQuoteTitle(movie) {
-    this.quoteMovie = movie;
+  setQuoteRole(role) {
+    this.quoteRole = role;
     this.testForWin();
   }
 
   testForWin() {
-    if (this.movieTitle === this.actorMovie && this.movieTitle === this.quoteMovie) {
+    if (
+        this.movieTitle === this.actorMovie &&
+        this.actorRoleName === this.quoteRole
+      ) {
       alert("You win!");
       this.actorMovie = undefined;
       this.movieTitle = undefined;
-      this.quoteMovie = undefined;
+      this.actorRoleName = undefined;
+      this.quoteRole = undefined;
     } else if ( this.movieTitle === undefined ||
                 this.actorMovie === undefined ||
-                this.quoteMovie === undefined
+                this.actorRoleName === undefined ||
+                this.quoteRole === undefined
               ){
       console.log("ok, keep trying!");
     } else {
       console.log("Please try again");
       this.actorMovie = undefined;
       this.movieTitle = undefined;
-      this.quoteMovie = undefined;
+      this.actorRoleName = undefined;
+      this.quoteRole = undefined;
     }
   }
 }
