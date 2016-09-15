@@ -4,10 +4,9 @@ declare var $:any
 
 @Injectable()
 export class ScoreService {
-  
-  postScores(): any {
+
+  postScores(score): any {
     var theUrl = "http:\/\/localhost:4200/score";
-    var theData;
 
     $.ajax({
       type: "POST",
@@ -17,9 +16,9 @@ export class ScoreService {
       },
       dataType: "json",
       url: theUrl,
-      data: JSON.stringify(theData),
+      data: JSON.stringify(score),
       success: function (data) {
-        return data;
+        console.log("success", data);
       }
     });
   }

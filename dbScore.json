@@ -1,18 +1,24 @@
-{ "score": [{
-    "id": 0,
-    "name": "Benson Willoughby",
-    "points": 30
-  }, {
-    "id": 1,
-    "name": "Renson Billoughy",
-    "points": 300
-  }, {
-    "id": 2,
-    "name": "Denson Rillowy",
-    "points": 24
-  }, {
-    "id": 3,
-    "name": "Dave Franco",
-    "points": 1000
-  }]
+{
+  "score": [
+    {
+      "id": 0,
+      "name": "Benson Willoughby",
+      "points": 30
+    },
+    {
+      "id": 1,
+      "name": "Renson Billoughy",
+      "points": 300
+    },
+    {
+      "id": 2,
+      "name": "Denson Rillowy",
+      "points": 24
+    },
+    {
+      "id": 3,
+      "name": "Dave Franco",
+      "points": 1000
+    }
+  ]
 }
