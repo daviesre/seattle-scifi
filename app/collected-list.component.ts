@@ -17,9 +17,9 @@ declare var $:any
   inputs: ['collectedList'],
   directives: [MovieListComponent, ActorListComponent, QuoteListComponent, ScoreListComponent],
   template: `
-    <div class="container">
+    <div class="container body-wrapper">
+    <button class="score-btn btn" (click)="toggleScoreBoard()">CLICK ME 4 SCORES</button>
       <div class="rows row">
-
         <div class="col-md-4">
           <movie-list [model]="content"></movie-list>
         </div>
@@ -33,15 +33,14 @@ declare var $:any
         </div>
 
       </div>
-      <div class="row">
-        <score-list></score-list>
-      </div>
+      <score-list *ngIf="showScores"></score-list>
     </div>
   `,
   providers: [ContentService, GameLogicService]
 })
 export class CollectedListComponent{
   content;
+  showScores: boolean = false;
   points;
   constructor(private contentService: ContentService, private gameLogicService: GameLogicService) {
 
@@ -49,6 +48,14 @@ export class CollectedListComponent{
   ngOnInit() {
     var self=this;
     this.getContent(self);
+  }
+
+  toggleScoreBoard() {
+    if (this.showScores === false) {
+      this.showScores = true;
+    } else {
+      this.showScores = false;
+    }
   }
 
   getContent(self): any {
