@@ -8,11 +8,13 @@
   background-color: #2B2129;
   margin-left: -100px;
   margin-right: -100px;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .game-title {
   float: right;
-  padding-top: 80px;
+  padding-top: 40px;
+  padding-right: 200px;
 }
 
 body {
