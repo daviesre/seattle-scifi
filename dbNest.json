@@ -52,7 +52,7 @@
     "title": "Barbarella",
     "director": "Roger Vadim",
     "description": "In the distant future, a highly sexual woman is assigned with finding and stopping the evil Durand-Durand. Along the way, she encounters various unusual people",
-    "image": "http://ia.media-imdb.com/images/M/MV5BMjExMzcwMjU4OV5BMl5BanBnXkFtZTgwNzYzMjU2MTE@._V1_SY1000_CR0,0,683,1000_AL_.jpg",
+    "image": "https://s3.drafthouse.com/images/made/barbarella1_240_355_81_s_c1.jpg",
 
     "actor":  [{
         "id": 0,
@@ -74,7 +74,7 @@
         "lastName": "Pallenberg",
         "roleName": "The Great Tyrant",
         "movie": "Barbarella)",
-        "imageUrl": "https://s-media-cache-ak0.pinimg.com/236x/c0/ac/5c/c0ac5c4d2e1dec78902478bda643bf28.jpg"
+        "imageUrl": "https://anniedieuleveut.files.wordpress.com/2013/04/anita-pallenberg.jpg"
         }],
 
     "quote": [{
@@ -150,7 +150,7 @@
     "title": "Ex Machina",
     "director": "Alex Garland",
     "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a breath-taking humanoid A.I.",
-    "image": "http://ia.media-imdb.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SY1000_CR0,0,674,1000_AL_.jpg",
+    "image": "http://pics.filmaffinity.com/ex_machina-368494509-large.jpg",
 
     "actor":  [{
         "id": 0,
@@ -158,7 +158,7 @@
         "lastName": "Vikander",
         "roleName": "Eva",
         "movie": "Ex Machina",
-        "imageUrl": "https://parttimemonster.files.wordpress.com/2015/06/exmachina.jpg"
+        "imageUrl": "https://pbs.twimg.com/profile_images/572504290736881664/OsPi4zOB.png"
         }, {
         "id": 1,
         "firstName": "Domhnall",
@@ -172,7 +172,7 @@
         "lastName": "Isaac",
         "roleName": "Nathan",
         "movie": "Ex Machina",
-        "imageUrl": "https://www.watsondg.com/sites/default/files/styles/medium/public/project/stills/nathan_intro_v2.png?itok=JaEgLxkO"
+        "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTqJJQ1WCnGmQel2eISRQAQHHi5vylVsYF6ouD9AWFdKBIgEzpZqw"
         }],
 
     "quote": [{

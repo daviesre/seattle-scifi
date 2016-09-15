@@ -1,15 +1,27 @@
 import { Component } from 'angular2/core';
 import { Quote } from './quote.model';
+import { GameLogicService } from './game-logic.service';
 
 
 @Component ({
   selector: 'quote-display',
-  inputs: ['quote'],
+  inputs: ['model'],
   template: `
-    <h4>Quote is: {{quote.body}}</h4>
-    <p><img src={{quote.image}} height="100" width="200"><p>
+    <div *ngFor="#quote of model.quote"
+    (click)="quoteClicked(quote)">
+      <p><img src={{quote.image}} height="100" width="200"><p>
+      <h4>Quote is: {{quote.body}}</h4>
+    </div>
   `
 })
 export class QuoteComponent {
-  public quote: Quote;
+  public selectedQuote;
+
+  constructor(private gameLogicService: GameLogicService) {
+
+  }
+
+  quoteClicked(clickedQuote) : void {
+    this.gameLogicService.setQuoteTitle(clickedQuote.movie);
+  }
 }

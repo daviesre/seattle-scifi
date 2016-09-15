@@ -4,7 +4,6 @@ import { MovieListComponent } from './movie-list.component';
 import { ActorListComponent } from './actor-list.component';
 import { QuoteListComponent } from './quote-list.component';
 import { ScoreListComponent } from './score-list.component';
-import { GameLogicService } from './game-logic.service';
 
 //for importing JSON with GET request
 import { ContentService } from './content.service';
@@ -19,30 +18,45 @@ declare var $:any
   template: `
     <div class="container">
       <div class="rows row">
-
         <div class="col-md-4">
-          <movie-list [model]="content"></movie-list>
+          <div *ngFor="#item of content">
+              <p><img src={{item.image}} height="150" width="115"></p>
+              <h4> {{item.title}} </h4>
+              <p>A film by {{item.director}}</p>
+              <p>{{item.description}}</p>
+          </div>
         </div>
-
         <div class="col-md-4">
-          <actor-list [model]="content"></actor-list>
+          <div *ngFor="#item of content">
+            <div *ngFor="#actor of item.actor">
+                <p><img src={{actor.imageUrl}} height="150" width="110"></p>
+                <h4> {{actor.roleName}} </h4>
+            </div>
+          </div>
         </div>
-
         <div class="col-md-4">
-          <quote-list [model]="content"></quote-list>
+          <div *ngFor="#item of content">
+            <div *ngFor="#quote of item.quote">
+              <div class="col-md-6">
+                <p align-vertical="middle"><em> {{quote.body}}</em></p>
+              </div>
+              <div class="col-md-6">
+              <p><img src={{quote.image}} height="150" width="235"></p>
+              </div>
+            </div>
+          </div>
         </div>
-
       </div>
       <div class="row">
         <score-list></score-list>
       </div>
     </div>
   `,
-  providers: [ContentService, GameLogicService]
+  providers: [ContentService]
 })
 export class CollectedListComponent{
   content;
-  constructor(private contentService: ContentService, private gameLogicService: GameLogicService) {
+  constructor(private contentService: ContentService) {
 
   }
   ngOnInit() {
