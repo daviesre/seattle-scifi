@@ -9,7 +9,8 @@ import { ActorComponent } from './actor.component';
   directives: [ActorComponent], //update directive needed later
   template:
   `
-  <h3>Actors</h3>
+  <h3 class="heading">Character: </h3>
+  <br>
   <actor-display *ngFor="#currentMovie of model"
     [model]="currentMovie">
   </actor-display>
