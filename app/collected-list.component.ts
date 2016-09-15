@@ -19,7 +19,7 @@ declare var $:any
       <div class="rows">
         <div class="col-md-4">
           <div *ngFor="#item of content">
-              <p><img src={{item.image}} height="125" width="100"></p>
+              <p><img src={{item.image}} height="150" width="115"></p>
               <h4> {{item.title}} </h4>
               <p>A film by {{item.director}}</p>
               <p>{{item.description}}</p>
@@ -28,7 +28,7 @@ declare var $:any
         <div class="col-md-4">
           <div *ngFor="#item of content">
             <div *ngFor="#actor of item.actor">
-                <p><img src={{actor.imageUrl}} height="120" width="110"></p>
+                <p><img src={{actor.imageUrl}} height="150" width="110"></p>
                 <h4> {{actor.roleName}} </h4>
             </div>
           </div>
@@ -40,7 +40,7 @@ declare var $:any
                 <p align-vertical="middle"><em> {{quote.body}}</em></p>
               </div>
               <div class="col-md-6">
-              <p><img src={{quote.image}} height="125" width="200"></p>
+              <p><img src={{quote.image}} height="150" width="235"></p>
               </div>
             </div>
           </div>
