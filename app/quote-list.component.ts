@@ -8,7 +8,8 @@ import { Quote } from './quote.model';
     inputs: ['model'],
     directives: [QuoteComponent],
     template: `
-        <h3>Quotes</h3>
+        <h3 class="heading">Quote: </h3>
+        <br>
         <quote-display *ngFor="#currentQuote of model"
             [model]="currentQuote">
         </quote-display>
