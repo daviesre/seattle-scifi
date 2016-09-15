@@ -7,10 +7,14 @@ import { GameLogicService } from './game-logic.service';
   inputs: ['model'],
   template: `
   <div (click)="movieClicked(model)">
-    <h2><img height="200" width="auto" src={{model.image}}></h2>
-    <h3>{{ model.title }}</h3>
-    <h4>Directed by {{ model.director }}</h4>
-    <h5> {{ model.description }}</h5>
+    <figure>
+      <h2><img height="200" width="auto" src={{model.image}}></h2>
+        <h3>{{ model.title }}</h3>
+        <figcaption>
+          <h3>Directed by {{ model.director }}</h3>
+          <h4> {{ model.description }}</h4>
+        </figcaption>
+    </figure>
   </div>
   `
 })

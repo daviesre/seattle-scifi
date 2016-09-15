@@ -9,8 +9,13 @@ import { GameLogicService } from './game-logic.service';
   template: `
     <div *ngFor="#quote of model.quote"
     (click)="quoteClicked(quote)">
-      <p><img src={{quote.image}} height="100" width="200"><p>
-      <h4>Quote is: {{quote.body}}</h4>
+
+      <div class="temp-hide">
+        <p><img src={{quote.image}} height="100" width="200"><p>
+      </div>
+
+      <h4 class="quote-block jumbotron"><span class="quote-text">{{quote.body}}</span></h4>
+
     </div>
   `
 })
