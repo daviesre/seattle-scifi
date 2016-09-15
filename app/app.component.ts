@@ -2,6 +2,7 @@
 import { Component } from 'angular2/core';
 import { Movie } from "./movie.model";
 import { CollectedListComponent } from "./collected-list.component";
+import { GameLogicService } from './game-logic.service';
 
 // annotation
 @Component({
@@ -22,5 +23,8 @@ import { CollectedListComponent } from "./collected-list.component";
 })
 // class definition
 export class AppComponent {
+  constructor() {
+
+  }
 
 }

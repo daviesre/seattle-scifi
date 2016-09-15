@@ -4,6 +4,7 @@ import { MovieListComponent } from './movie-list.component';
 import { ActorListComponent } from './actor-list.component';
 import { QuoteListComponent } from './quote-list.component';
 import { ScoreListComponent } from './score-list.component';
+import { GameLogicService } from './game-logic.service';
 
 //for importing JSON with GET request
 import { ContentService } from './content.service';
@@ -37,11 +38,11 @@ declare var $:any
       </div>
     </div>
   `,
-  providers: [ContentService]
+  providers: [ContentService, GameLogicService]
 })
 export class CollectedListComponent{
   content;
-  constructor(private contentService: ContentService) {
+  constructor(private contentService: ContentService, private gameLogicService: GameLogicService) {
 
   }
   ngOnInit() {

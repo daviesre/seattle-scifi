@@ -12,8 +12,7 @@ import { GameLogicService } from './game-logic.service';
       <p><img src={{quote.image}} height="100" width="200"><p>
       <h4>Quote is: {{quote.body}}</h4>
     </div>
-  `,
-    providers: [GameLogicService]
+  `
 })
 export class QuoteComponent {
   public selectedQuote;
@@ -23,11 +22,6 @@ export class QuoteComponent {
   }
 
   quoteClicked(clickedQuote) : void {
-    console.log(clickedQuote.movie);
-    this.sendQuoteToService(clickedQuote.movie);
-  }
-
-  sendQuoteToService(movie: String) {
-    this.gameLogicService.setQuoteTitle(movie);
+    this.gameLogicService.setQuoteTitle(clickedQuote.movie);
   }
 }
