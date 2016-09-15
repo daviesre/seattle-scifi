@@ -1,6 +1,6 @@
 { "movie": [{
     "id": 0,
-    "title": "Ex Machina (Director's Cut)",
+    "title": "Bladerunner (Director's Cut)",
     "director": "Ridley Scott",
     "description": "A blade runner must pursue and try to terminate four replicants who stole a ship in space and have returned to Earth to find their creator.",
     "image": "http://ia.media-imdb.com/images/M/MV5BZWZlYmEyYTItNGRjYy00ZmMxLWEzMWItM2Q2NjZlNTMwMjQ3XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SY1000_CR0,0,665,1000_AL_.jpg",
@@ -23,9 +23,9 @@
         "id": 2,
         "firstName": "Rutger",
         "lastName": "Hauer",
-        "role": "Roy Batty",
+        "roleName": "Roy Batty",
         "movie": "Bladerunner (Director's Cut)",
-        "imageUrl": "http://orig07.deviantart.net/5a90/f/2014/352/3/9/blade_runner___rutger_hauer_by_maxhitman-d8ac54q.jpg"
+        "imageUrl": "http://wallpoper.com/images/00/30/86/48/blade-runner_00308648.jpg"
         }],
 
     "quote": [{
@@ -60,21 +60,21 @@
         "lastName": "Fonda",
         "roleName": "Barbarella",
         "movie": "Barbarella",
-        "imageUrl": "http://4.bp.blogspot.com/-_K-DgKZys6w/UQsfprGo1mI/AAAAAAAACFY/k-lPmkKdDps/s1600/barbarella.jpg"
+        "imageUrl": "http://www.fashiongonerogue.com/wp-content/uploads/2016/01/Barbarella-Green-Costume-Jane-Fonda.jpg"
         }, {
         "id": 1,
         "firstName": "John",
         "lastName": "Phillip-Law",
         "roleName": "Pygar",
         "movie": "Barbarella",
-        "imageUrl": "http://www.doctormacro.com/Images/Fonda,%20Jane/Annex/NRFPT/Annex%20-%20Fonda,%20Jane%20(Barbarella)_NRFPT_14.jpg"
+        "imageUrl": "http://forgottenflix.com/wp-content/uploads/2011/08/Pygar-and-Barbarella.jpg"
         }, {
         "id": 2,
         "firstName": "Anita",
         "lastName": "Pallenberg",
-        "role": "The Great Tyrant",
+        "roleName": "The Great Tyrant",
         "movie": "Barbarella)",
-        "imageUrl": "http://goldenagehollywood.weebly.com/uploads/3/2/0/7/32077337/2908133.png?300"
+        "imageUrl": "https://s-media-cache-ak0.pinimg.com/236x/c0/ac/5c/c0ac5c4d2e1dec78902478bda643bf28.jpg"
         }],
 
     "quote": [{
@@ -109,7 +109,7 @@
         "lastName": "MacLachlan",
         "roleName": "Paul Atreides",
         "movie": "Dune",
-        "imageUrl": "http://1.bp.blogspot.com/-DheybjpHOJs/Udw14fdQGzI/AAAAAAAAYDg/hce3prNDD5g/s1600/Dune+Wallpapers+03.jpg"
+        "imageUrl": "http://www.imagozone.com/var/albums/filme/Dune/Dune%20v%207.jpg?m=1293068055"
         }, {
         "id": 1,
         "firstName": "Linda",
@@ -121,9 +121,9 @@
         "id": 2,
         "firstName": "Alicia",
         "lastName": "Witt",
-        "role": "Alia",
+        "roleName": "Alia",
         "movie": "Dune",
-        "imageUrl": "http://www.duneinfo.com/Content/images/arrakis/actors/zoom/alia.jpg"
+        "imageUrl": "http://media-cache-ak0.pinimg.com/736x/94/f1/91/94f19128315c7a053e0f21dc801f2228.jpg"
         }],
 
     "quote": [{
@@ -134,7 +134,7 @@
         "image": "http://www.duneinfo.com/Content/images/giedi-prime/film/dvd-extended/popups/d_maker.jpg"
         }, {
         "id": 1,
-        "body": "The Guild... they're fighting me in the mental vaults. They're behind everything. They fear the one who will come, who will know more, who will see more. The Guild is behind everything. It's not finished yet. I'm not formed.",
+        "body": "The Guild... they're fighting me in the mental vaults. They're behind everything. They fear the one who will come...",
         "role": "Alia",
         "movie": "Dune",
         "image": "http://i.ytimg.com/vi/y4kLGBdloSg/hqdefault.jpg"
@@ -158,7 +158,7 @@
         "lastName": "Vikander",
         "roleName": "Eva",
         "movie": "Ex Machina",
-        "imageUrl": "http://i.ytimg.com/vi/7Ftabq8osrQ/maxresdefault.jpg"
+        "imageUrl": "https://parttimemonster.files.wordpress.com/2015/06/exmachina.jpg"
         }, {
         "id": 1,
         "firstName": "Domhnall",
@@ -170,7 +170,7 @@
         "id": 2,
         "firstName": "Oscar",
         "lastName": "Isaac",
-        "role": "Nathan",
+        "roleName": "Nathan",
         "movie": "Ex Machina",
         "imageUrl": "https://www.watsondg.com/sites/default/files/styles/medium/public/project/stills/nathan_intro_v2.png?itok=JaEgLxkO"
         }],
@@ -183,7 +183,7 @@
         "image": "http://blogs-images.forbes.com/markhughes/files/2015/04/EX-MACHINA-23.png"
         }, {
         "id": 1,
-        "body": "One day the AIs are going to look back on us the same way we look at fossil skeletons on the plains of Africa. An upright ape living in dust with crude language and tools, all set for extinction",
+        "body": "One day the AIs are going to look back on us the same way we look at fossil skeletons on the plains of Africa.",
         "role": "Nathan",
         "movie": "Ex Machina",
         "image": "http://www.gannett-cdn.com/-mm-/b64232029576481aaedac2ea6cd51afcbde18820/c=0-181-4253-2584&r=x1683&c=3200x1680/local/-/media/2015/04/07/USATODAY/USATODAY/635640213403707717-XXX-EX-MACHINA-MOV-JY-5552-72150680.JPG"
