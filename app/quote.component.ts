@@ -26,7 +26,11 @@ export class QuoteComponent {
   }
 
   quoteClicked(clickedQuote) {
+<<<<<<< HEAD
     this.guessed = this.gameLogicService.setQuoteTitle(clickedQuote.movie);
     console.log(this.guessed);
+=======
+    this.gameLogicService.setQuoteRole(clickedQuote.role);
+>>>>>>> 8e413d57fe37cff4a76006defee6f04fb299f71b
   }
 }
