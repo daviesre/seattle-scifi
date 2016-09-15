@@ -3,6 +3,7 @@ import { Component } from 'angular2/core';
 import { MovieListComponent } from './movie-list.component';
 import { ActorListComponent } from './actor-list.component';
 import { QuoteListComponent } from './quote-list.component';
+import { ScoreListComponent } from './score-list.component';
 
 //for importing JSON with GET request
 import { ContentService } from './content.service';
@@ -13,10 +14,10 @@ declare var $:any
 @Component({
   selector: 'collected-list',
   inputs: ['collectedList'],
-  directives: [MovieListComponent, ActorListComponent, QuoteListComponent],
+  directives: [MovieListComponent, ActorListComponent, QuoteListComponent, ScoreListComponent],
   template: `
     <div class="container">
-      <div class="rows">
+      <div class="rows row">
         <div class="col-md-4">
           <movie-list></movie-list>
         </div>
@@ -26,6 +27,9 @@ declare var $:any
         <div class="col-md-4">
           <quote-list></quote-list>
         </div>
+      </div>
+      <div class="row">
+        <score-list></score-list>
       </div>
     </div>
   `,
@@ -38,7 +42,8 @@ export class CollectedListComponent{
   }
   ngOnInit() {
     var self=this;
-    this.getContent(self); }
+    this.getContent(self);
+  }
 
   getContent(self): any {
     var theUrl = "http:\/\/localhost:4200/movie";
