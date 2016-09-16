@@ -5,8 +5,9 @@ declare var $:any
 @Injectable()
 export class ScoreService {
 
-  postScores(score): any {
+  postScores(name, points): any {
     var theUrl = "https://ng-test-adb57.firebaseio.com/score.json";
+    var intPoints = parseInt(points);
 
     $.ajax({
       type: "POST",
@@ -16,7 +17,7 @@ export class ScoreService {
       },
       dataType: "json",
       url: theUrl,
-      data: JSON.stringify(score),
+      data: JSON.stringify({"name": name, "points": intPoints}),
       success: function (data) {
         console.log("success", data);
       }
