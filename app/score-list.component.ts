@@ -13,10 +13,16 @@ declare var $:any
   `
   <div class="score-board">
     <h3>High Scores!</h3>
+    <hr>
+    <h5>Log your score (honor system)!</h5>
+    <input placeholder="Name" #newName>
+    <input placeholder="Points" #newPoints>
+    <hr>
     <button class="btn btn-success score-btn"
-      (click)="postScore({'name': 'TestPerson', 'points': 100})">
+      (click)="postScore(newName.value, newPoints.value)">
       Click to add test score data
     </button>
+    <hr>
     <score-display *ngFor="#currentScore of scores"
       [score]="currentScore">
     </score-display>
@@ -52,9 +58,10 @@ export class ScoreListComponent {
     this.sortJson(this.scores, "points", "int", false);
   }
 
-  postScore(score) {
+  postScore(name, points) {
     var self=this;
-    this.scoreService.postScores(score);
+    console.log(name, points);
+    this.scoreService.postScores(name, points);
     this.getScores();
   }
 
